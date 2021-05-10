@@ -1,0 +1,1152 @@
+detox[9855] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{"artifactsConfig":{"rootDir":"artifacts/android.2021-05-05 12-50-15Z","plugins":{"log":{"enabled":true,"keepOnlyFailedTestsArtifacts":false},"screenshot":{"enabled":true,"shouldTakeAutomaticSnapshots":false,"keepOnlyFailedTestsArtifacts":false},"video":{"enabled":false,"keepOnlyFailedTestsArtifacts":false},"instruments":{"enabled":false,"keepOnlyFailedTestsArtifacts":false},"timeline":{"enabled":false},"uiHierarchy":{"enabled":false,"keepOnlyFailedTestsArtifacts":false}},"pathBuilder":{"_rootDir":"artifacts/android.2021-05-05 12-50-15Z"}},"appsConfig":{"default":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/debug/app-debug.apk","build":"cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd .."}},"behaviorConfig":{"init":{"reinstallApp":true,"exposeGlobals":true},"cleanup":{"shutdownDevice":false},"launchApp":"auto"},"cliConfig":{"recordLogs":"all","configuration":"android","forceAdbInstall":"false","useCustomLogger":"true"},"deviceConfig":{"type":"android.emulator","device":{"avdName":"Nexus_S_API_29"}},"runnerConfig":{"testRunner":"jest","runnerConfig":"e2e/config.json","specs":"e2e"},"sessionConfig":{"autoStart":true,"server":"ws://localhost:51502","sessionId":"42aecc5a-7547-608b-dc54-6067fe336112","debugSynchronization":10000},"errorComposer":{"configurationName":"android","filepath":"/Users/damith/devs/reactNative/HellowDetox/.detoxrc.json","contents":{"testRunner":"jest","runnerConfig":"e2e/config.json","apps":{"ios":{"type":"ios.app","binaryPath":"ios/build/Build/Products/Debug-iphonesimulator/HellowDetox.app","build":"xcodebuild -workspace ios/HellowDetox.xcworkspace  -scheme HellowDetox  -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"},"android":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/debug/app-debug.apk","build":"cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd .."},"android.release":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/release/app-release.apk","build":"cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd .."}},"devices":{"simulator":{"type":"ios.simulator","device":{"type":"iPhone 12"}},"emulator":{"type":"android.emulator","device":{"avdName":"Nexus_S_API_29"}}},"configurations":{"ios":{"device":"simulator","app":"ios"},"android":{"device":"emulator","app":"android"},"android.emu.release":{"device":"emulator","app":"android.release"}}},"_extends":false}}
+detox[9855] DEBUG: [WSS_CREATE] Detox server listening on localhost:51502...
+detox[9855] DEBUG: [WSS_CONNECTION, #51503] registered a new connection.
+detox[9855] TRACE: [WS_OPEN] opened web socket to: ws://localhost:51502
+detox[9855] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"42aecc5a-7547-608b-dc54-6067fe336112","role":"tester"},"messageId":0}
+detox[9855] TRACE: [WSS_GET_FROM, #51503] {"type":"login","params":{"sessionId":"42aecc5a-7547-608b-dc54-6067fe336112","role":"tester"},"messageId":0}
+detox[9855] TRACE: [SESSION_CREATED] created session 42aecc5a-7547-608b-dc54-6067fe336112
+detox[9855] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+detox[9855] TRACE: [SESSION_JOINED] tester joined session 42aecc5a-7547-608b-dc54-6067fe336112
+detox[9855] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+detox[9855] DEBUG: [EXEC_CMD, #0] "/Users/damith/Library/Android/sdk/emulator/emulator" -list-avds --verbose
+detox[9855] TRACE: [EXEC_SUCCESS, #0] Nexus_S_API_29
+Pixel_XL_API_27
+Pixel_XL_API_29
+prod-sim
+
+detox[9855] DEBUG: [EXEC_CMD, #1] "/Users/damith/Library/Android/sdk/emulator/emulator" -version 
+detox[9855] TRACE: [EXEC_SUCCESS, #1] Android emulator version 30.5.6.0 (build_id 7318519) (CL:N/A)
+Copyright (C) 2006-2017 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+
+detox[9855] DEBUG: [EMU_BIN_VERSION_DETECT] Detected emulator binary version { major: 30, minor: 5, patch: 6, toString: [Function: toString] }
+detox[9855] DEBUG: [ALLOCATE_DEVICE] Trying to allocate a device based on "Nexus_S_API_29"
+detox[9855] DEBUG: [EXEC_CMD, #2] "/Users/damith/Library/Android/sdk/platform-tools/adb"  devices
+detox[9855] DEBUG: [EXEC_SUCCESS, #2] List of devices attached
+
+
+detox[9855] DEBUG: [ALLOCATE_DEVICE] Settled on emulator-11354
+detox[9855] DEBUG: [SPAWN_CMD] /Users/damith/Library/Android/sdk/emulator/emulator -verbose -no-audio -no-boot-anim -port 11354 @Nexus_S_API_29
+detox[9855] DEBUG: [SPAWN_SUCCESS] handleCpuAcceleration: feature check for hvf
+cannot add library /Users/damith/Library/Android/sdk/emulator/qemu/darwin-x86_64/lib64/vulkan/libvulkan.dylib: failed
+emulator: autoconfig: -skin nexus_s
+emulator: autoconfig: -skindir /Users/damith/Library/Android/sdk/skins/
+emulator: autoconfig: -kernel /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//kernel-ranchu-64
+emulator: Target arch = 'x86'
+emulator: Auto-config: -qemu -cpu qemu32
+emulator: Auto-detect: Kernel image requires new device naming scheme.
+emulator: Auto-detect: Kernel does not support YAFFS2 partitions.
+emulator: autoconfig: -ramdisk /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//ramdisk.img
+emulator: Using initial system image: /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//system.img
+emulator: Using initial vendor image: /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//vendor.img
+emulator: autoconfig: -data /Users/damith/.android/avd/Nexus_S_API_29.avd/userdata-qemu.img
+emulator: autoconfig: -initdata /Users/damith/.android/avd/Nexus_S_API_29.avd/userdata.img
+emulator: autoconfig: -cache /Users/damith/.android/avd/Nexus_S_API_29.avd/cache.img
+emulator: autoconfig: -sdcard /Users/damith/.android/avd/Nexus_S_API_29.avd/sdcard.img
+emulator: Increasing RAM size to 2048MB
+emulator: VM heap size 48MB is below hardware specified minimum of 512MB,setting it to that value
+emulator: System image is read only
+emulator: Found 1 DNS servers: 192.168.1.1
+emulator: VERBOSE: FeatureControlImpl.cpp:172: WARNING: unexpected system image feature string, emulator might not function correctly, please try updating the emulator.
+
+emulator: VERBOSE: FeatureControlImpl.cpp:175: Unexpected feature list:
+
+emulator: VERBOSE: FeatureControlImpl.cpp:177: Vulkan
+emulator: VERBOSE: FeatureControlImpl.cpp:179: 
+
+emulator: trying to load skin file '/Users/damith/Library/Android/sdk/skins//nexus_s/layout'
+emulator: Requested console port 11354: Inferring adb port 11355.
+emulator: CPU Acceleration: working
+emulator: CPU Acceleration status: Hypervisor.Framework OS X Version 11.3
+emulator: registered 'boot-properties' qemud service
+emulator: Adding boot property: 'qemu.cmdline' = 'androidboot.logcat=*:V androidboot.consolepipe=qemu_pipe,pipe:logcat'
+emulator: Adding boot property: 'qemu.logcat' = 'start'
+emulator: GPU emulation enabled using 'host' mode
+emulator: Initializing hardware OpenGLES emulation support
+emulator: VERBOSE: MultiDisplay.cpp:325: create display 0
+emulator: VERBOSE: MultiDisplay.cpp:416: setDisplayPose 0 x 0 y 0 w 480 h 800 dpi 0
+emulator: Found 1 DNS servers: 192.168.1.1
+Content of hardware configuration file:
+  hw.cpu.arch = x86
+  hw.cpu.model = qemu32
+  hw.cpu.ncore = 4
+  hw.ramSize = 2048
+  hw.screen = multi-touch
+  hw.mainKeys = true
+  hw.trackBall = false
+  hw.keyboard = true
+  hw.keyboard.lid = false
+  hw.keyboard.charmap = qwerty2
+  hw.dPad = false
+  hw.rotaryInput = false
+  hw.gsmModem = true
+  hw.gps = true
+  hw.battery = true
+  hw.accelerometer = true
+  hw.gyroscope = true
+  hw.audioInput = true
+  hw.audioOutput = true
+  hw.sdCard = true
+  hw.sdCard.path = /Users/damith/.android/avd/Nexus_S_API_29.avd/sdcard.img
+  disk.cachePartition = true
+  disk.cachePartition.path = /Users/damith/.android/avd/Nexus_S_API_29.avd/cache.img
+  disk.cachePartition.size = 66m
+  test.quitAfterBootTimeOut = -1
+  test.delayAdbTillBootComplete = 0
+  test.monitorAdb = 0
+  hw.lcd.width = 480
+  hw.lcd.height = 800
+  hw.lcd.depth = 16
+  hw.lcd.density = 240
+  hw.lcd.backlight = true
+  hw.lcd.vsync = 60
+  hw.gltransport = pipe
+  hw.gltransport.asg.writeBufferSize = 1048576
+  hw.gltransport.asg.writeStepSize = 4096
+  hw.gltransport.asg.dataRingSize = 32768
+  hw.gltransport.drawFlushInterval = 800
+  hw.displayRegion.0.1.xOffset = -1
+  hw.displayRegion.0.1.yOffset = -1
+  hw.displayRegion.0.1.width = 0
+  hw.displayRegion.0.1.height = 0
+  hw.displayRegion.0.2.xOffset = -1
+  hw.displayRegion.0.2.yOffset = -1
+  hw.displayRegion.0.2.width = 0
+  hw.displayRegion.0.2.height = 0
+  hw.displayRegion.0.3.xOffset = -1
+  hw.displayRegion.0.3.yOffset = -1
+  hw.displayRegion.0.3.width = 0
+  hw.displayRegion.0.3.height = 0
+  hw.display1.width = 0
+  hw.display1.height = 0
+  hw.display1.density = 0
+  hw.display1.xOffset = -1
+  hw.display1.yOffset = -1
+  hw.display1.flag = 0
+  hw.display2.width = 0
+  hw.display2.height = 0
+  hw.display2.density = 0
+  hw.display2.xOffset = -1
+  hw.display2.yOffset = -1
+  hw.display2.flag = 0
+  hw.display3.width = 0
+  hw.display3.height = 0
+  hw.display3.density = 0
+  hw.display3.xOffset = -1
+  hw.display3.yOffset = -1
+  hw.display3.flag = 0
+  hw.gpu.enabled = true
+  hw.gpu.mode = host
+  hw.initialOrientation = Portrait
+  hw.camera.back = virtualscene
+  hw.camera.front = emulated
+  vm.heapSize = 512
+  hw.sensors.light = true
+  hw.sensors.pressure = true
+  hw.sensors.humidity = true
+  hw.sensors.proximity = true
+  hw.sensors.magnetic_field = true
+  hw.sensors.magnetic_field_uncalibrated = true
+  hw.sensors.gyroscope_uncalibrated = true
+  hw.sensors.orientation = true
+  hw.sensors.temperature = true
+  hw.sensor.hinge = true
+  hw.sensor.hinge.count = 0
+  hw.sensor.hinge.type = 0
+  hw.sensor.hinge.sub_type = 0
+  hw.sensor.hinge.fold_to_displayRegion.0.1_at_posture = 1
+  hw.sensor.roll = false
+  hw.sensor.roll.count = 0
+  hw.sensor.roll.resize_to_displayRegion.0.1_at_posture = 6
+  hw.sensor.roll.resize_to_displayRegion.0.2_at_posture = 6
+  hw.sensor.roll.resize_to_displayRegion.0.3_at_posture = 6
+  hw.sensors.heart_rate = false
+  hw.useext4 = true
+  hw.arc = false
+  hw.arc.autologin = false
+  kernel.path = /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//kernel-ranchu-64
+  kernel.newDeviceNaming = yes
+  kernel.supportsYaffs2 = no
+  disk.ramdisk.path = /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//ramdisk.img
+  disk.systemPartition.initPath = /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//system.img
+  disk.systemPartition.size = 3083m
+  disk.vendorPartition.initPath = /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//vendor.img
+  disk.vendorPartition.size = 800m
+  disk.dataPartition.path = /Users/damith/.android/avd/Nexus_S_API_29.avd/userdata-qemu.img
+  disk.dataPartition.size = 800m
+  disk.encryptionKeyPartition.path = /Users/damith/.android/avd/Nexus_S_API_29.avd/encryptionkey.img
+  PlayStore.enabled = false
+  avd.name = Nexus_S_API_29
+  avd.id = Nexus_S_API_29
+  fastboot.forceColdBoot = false
+  android.sdk.root = /Users/damith/Library/Android/sdk
+  android.avd.home = /Users/damith/.android/avd
+.
+QEMU options list:
+emulator: argv[00] = "/Users/damith/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64"
+emulator: argv[01] = "-dns-server"
+emulator: argv[02] = "192.168.1.1"
+emulator: argv[03] = "-no-audio"
+emulator: argv[04] = "-mem-path"
+emulator: argv[05] = "/Users/damith/.android/avd/Nexus_S_API_29.avd/snapshots/default_boot/ram.img"
+emulator: argv[06] = "-mem-file-shared"
+emulator: argv[07] = "-serial"
+emulator: argv[08] = "null"
+emulator: argv[09] = "-android-ports"
+emulator: argv[10] = "11354,11355"
+emulator: argv[11] = "-device"
+emulator: argv[12] = "goldfish_pstore,addr=0xff018000,size=0x10000,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/data/misc/pstore/pstore.bin"
+emulator: argv[13] = "-cpu"
+emulator: argv[14] = "android64"
+emulator: argv[15] = "-enable-hvf"
+emulator: argv[16] = "-smp"
+emulator: argv[17] = "cores=4"
+emulator: argv[18] = "-m"
+emulator: argv[19] = "2048"
+emulator: argv[20] = "-lcd-density"
+emulator: argv[21] = "240"
+emulator: argv[22] = "-nodefaults"
+emulator: argv[23] = "-kernel"
+emulator: argv[24] = "/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//kernel-ranchu-64"
+emulator: argv[25] = "-initrd"
+emulator: argv[26] = "/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//ramdisk.img"
+emulator: argv[27] = "-drive"
+emulator: argv[28] = "if=none,index=0,id=system,if=none,file=/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//system.img,read-only"
+emulator: argv[29] = "-device"
+emulator: argv[30] = "virtio-blk-pci,drive=system,modern-pio-notify"
+emulator: argv[31] = "-drive"
+emulator: argv[32] = "if=none,index=1,id=cache,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+emulator: argv[33] = "-device"
+emulator: argv[34] = "virtio-blk-pci,drive=cache,modern-pio-notify"
+emulator: argv[35] = "-drive"
+emulator: argv[36] = "if=none,index=2,id=userdata,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+emulator: argv[37] = "-device"
+emulator: argv[38] = "virtio-blk-pci,drive=userdata,modern-pio-notify"
+emulator: argv[39] = "-drive"
+emulator: argv[40] = "if=none,index=3,id=encrypt,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+emulator: argv[41] = "-device"
+emulator: argv[42] = "virtio-blk-pci,drive=encrypt,modern-pio-notify"
+emulator: argv[43] = "-drive"
+emulator: argv[44] = "if=none,index=4,id=vendor,if=none,file=/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//vendor.img,read-only"
+emulator: argv[45] = "-device"
+emulator: argv[46] = "virtio-blk-pci,drive=vendor,modern-pio-notify"
+emulator: argv[47] = "-drive"
+emulator: argv[48] = "if=none,index=5,id=sdcard,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+emulator: argv[49] = "-device"
+emulator: argv[50] = "virtio-blk-pci,drive=sdcard,modern-pio-notify"
+emulator: argv[51] = "-netdev"
+emulator: argv[52] = "user,id=mynet"
+emulator: argv[53] = "-device"
+emulator: argv[54] = "virtio-net-pci,netdev=mynet"
+emulator: argv[55] = "-device"
+emulator: argv[56] = "virtio-rng-pci"
+emulator: argv[57] = "-show-cursor"
+emulator: argv[58] = "-device"
+emulator: argv[59] = "virtio_input_multi_touch_pci_1"
+emulator: argv[60] = "-device"
+emulator: argv[61] = "virtio_input_multi_touch_pci_2"
+emulator: argv[62] = "-device"
+emulator: argv[63] = "virtio_input_multi_touch_pci_3"
+emulator: argv[64] = "-device"
+emulator: argv[65] = "virtio_input_multi_touch_pci_4"
+emulator: argv[66] = "-device"
+emulator: argv[67] = "virtio_input_multi_touch_pci_5"
+emulator: argv[68] = "-device"
+emulator: argv[69] = "virtio_input_multi_touch_pci_6"
+emulator: argv[70] = "-device"
+emulator: argv[71] = "virtio_input_multi_touch_pci_7"
+emulator: argv[72] = "-device"
+emulator: argv[73] = "virtio_input_multi_touch_pci_8"
+emulator: argv[74] = "-device"
+emulator: argv[75] = "virtio_input_multi_touch_pci_9"
+emulator: argv[76] = "-device"
+emulator: argv[77] = "virtio_input_multi_touch_pci_10"
+emulator: argv[78] = "-device"
+emulator: argv[79] = "virtio_input_multi_touch_pci_11"
+emulator: argv[80] = "-device"
+emulator: argv[81] = "virtio-keyboard-pci"
+emulator: argv[82] = "-L"
+emulator: argv[83] = "/Users/damith/Library/Android/sdk/emulator/lib/pc-bios"
+emulator: argv[84] = "-soundhw"
+emulator: argv[85] = "hda"
+emulator: argv[86] = "-vga"
+emulator: argv[87] = "none"
+emulator: argv[88] = "-append"
+emulator: argv[89] = "qemu=1 no_timer_check androidboot.hardware=ranchu androidboot.serialno=EMULATOR30X5X6X0 clocksource=pit no-kvmclock android.qemud=1 console=0 android.checkjni=1 android.bootanim=0 qemu.gles=1 qemu.settings.system.screen_off_timeout=2147483647 qemu.encrypt=1 qemu.vsync=60 qemu.gltransport=pipe qemu.gltransport.drawFlushInterval=800 qemu.opengles.version=196608 qemu.uirenderer=skiagl cma=262M@0-4G qemu.wifi=1 mac80211_hwsim.radios=2 mac80211_hwsim.channels=2 loop.max_part=7 androidboot.vbmeta.size=4352 androidboot.vbmeta.hash_alg=sha256 androidboot.vbmeta.digest=fd6af4a5e0c03b255fabab650da6219606f0accbaf2dfe7c53c61b1d2aa50cb3 androidboot.boot_devices=pci0000:00/0000:00:03.0 ramoops.mem_address=0xff018000 ramoops.mem_size=0x10000 memmap=0x10000$0xff018000 qemu.dalvik.vm.heapsize=512m printk.devkmsg=on"
+emulator: argv[90] = "-android-hw"
+emulator: argv[91] = "/Users/damith/.android/avd/Nexus_S_API_29.avd/hardware-qemu.ini"
+Concatenated QEMU options:
+ /Users/damith/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64 -dns-server 192.168.1.1 -no-audio -mem-path /Users/dadded library /Users/damith/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib
+cannot add library /Users/damith/Library/Android/sdk/emulator/qemu/darwin-x86_64/lib64/vulkan/libMoltenVK.dylib: failed
+amith/.android/avd/Nexus_S_API_29.avd/snapshots/default_boot/ram.img -mem-file-shared -serial null -android-ports 11354,11355 -device goldfish_pstore,addr=0xff018000,size=0x10000,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/data/misc/pstore/pstore.bin -cpu android64 -enable-hvf -smp cores=4 -m 2048 -lcd-density 240 -nodefaults -kernel /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//kernel-ranchu-64 -initrd /Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//ramdisk.img -drive if=none,index=0,id=system,if=none,file=/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//system.img,read-only -device virtio-blk-pci,drive=system,modern-pio-notify -drive if=none,index=1,id=cache,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=cache,modern-pio-notify -drive if=none,index=2,id=userdata,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=userdata,modern-pio-notify -drive if=none,index=3,id=encrypt,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=encrypt,modern-pio-notify -drive if=none,index=4,id=vendor,if=none,file=/Users/damith/Library/Android/sdk/system-images/android-29/google_apis/x86//vendor.img,read-only -device virtio-blk-pci,drive=vendor,modern-pio-notify -drive if=none,index=5,id=sdcard,if=none,file=/Users/damith/.android/avd/Nexus_S_API_29.avd/sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=sdcard,modern-pio-notify -netdev user,id=mynet -device virtio-net-pci,netdev=mynet -device virtio-rng-pci -show-cursor -device virtio_input_multi_touch_pci_1 -device virtio_input_multi_touch_pci_2 -device virtio_input_multi_touch_pci_3 -device virtio_input_multi_touch_pci_4 -device virtio_input_multi_touch_pci_5 -device virtio_input_multi_touch_pci_6 -device virtio_input_multi_touch_pci_7 -device virtio_input_multi_touch_pci_8 -device virtio_input_multi_touch_pci_9 -device virtio_input_multi_touch_pci_10 -device virtio_input_multi_touch_pci_11 -device virtio-keyboard-pci -L /Users/damith/Library/Android/sdk/emulator/lib/pc-bios -soundhw hda -vga none -append 'qemu=1 no_timer_check androidboot.hardware=ranchu androidboot.serialno=EMULATOR30X5X6X0 clocksource=pit no-kvmclock android.qemud=1 console=0 android.checkjni=1 android.bootanim=0 qemu.gles=1 qemu.settings.system.screen_off_timeout=2147483647 qemu.encrypt=1 qemu.vsync=60 qemu.gltransport=pipe qemu.gltransport.drawFlushInterval=800 qemu.opengles.version=196608 qemu.uirenderer=skiagl cma=262M@0-4G qemu.wifi=1 mac80211_hwsim.radios=2 mac80211_hwsim.channels=2 loop.max_part=7 androidboot.vbmeta.size=4352 androidboot.vbmeta.hash_alg=sha256 androidboot.vbmeta.digest=fd6af4a5e0c03b255fabab650da6219606f0accbaf2dfe7c53c61b1d2aa50cb3 androidboot.boot_devices=pci0000:00/0000:00:03.0 ramoops.mem_address=0xff018000 ramoops.mem_size=0x10000 memmap=0x10000$0xff018000 qemu.dalvik.vm.heapsize=512m printk.devkmsg=on' -android-hw /Users/damith/.android/avd/Nexus_S_API_29.avd/hardware-qemu.ini
+emulator: Android qemu version 30.5.6.0 (build_id 7318519) (CL:N/A)
+
+emulator: Starting QEMU main loop
+emulator: Adding boot property: 'ro.opengles.version' = '196608'
+emulator: Adding boot property: 'qemu.sf.fake_camera' = 'front'
+emulator: Adding boot property: 'dalvik.vm.heapsize' = '512m'
+emulator: Adding boot property: 'qemu.hw.mainkeys' = '1'
+emulator: Adding boot property: 'qemu.sf.lcd_density' = '240'
+added library /Users/damith/Library/Android/sdk/emulator/lib64/vulkan/libMoltenVK.dylib
+emulator: goldfish_events.have-dpad: false
+emulator: goldfish_events.have-trackball: false
+emulator: goldfish_events.have-camera: true
+emulator: goldfish_events.have-keyboard: false
+emulator: goldfish_events.have-lidswitch: false
+emulator: goldfish_events.have-tabletmode: false
+emulator: goldfish_events.have-touch: false
+emulator: goldfish_events.have-multitouch: false
+emulator: WARNING: Requested adb port (11355) is outside the recommended range [5555,5586]. ADB may not function properly for the emulator. See -help-port for details.
+Not using any http proxy
+emulator: Adding boot property: 'qemu.timezone' = 'Asia/Colombo'
+emulator: android_hw_fingerprint_init: fingerprint qemud listen service initialized
+
+emulator: emulator_window_fb_rotate
+
+emulator: VERBOSE: MultiDisplay.cpp:698: config multidisplay with config.ini 0x0 0x0 0x0
+emulator: No acpi ini file provided, using default
+
+emulator: OpenGL Vendor=[Google (ATI Technologies Inc.)]
+emulator: OpenGL Renderer=[Android Emulator OpenGL ES Translator (AMD Radeon Pro 560 OpenGL Engine)]
+emulator: OpenGL Version=[OpenGL ES 3.0 (4.1 ATI-4.4.17)]
+emulator: VERBOSE: AdbInterface.cpp:386: Found: 3 adb executables
+emulator: VERBOSE: AdbInterface.cpp:388: Adb: /Users/damith/Library/Android/sdk/platform-tools/adb
+emulator: VERBOSE: AdbInterface.cpp:388: Adb: /Users/damith/Library/Android/sdk/platform-tools/adb
+emulator: VERBOSE: AdbInterface.cpp:388: Adb: /Users/damith/Library/Android/sdk/platform-tools/adb
+emulator: VERBOSE: AdbInterface.cpp:410: Path:/Users/damith/Library/Android/sdk/platform-tools/adb protocol version: 41
+emulator: VERBOSE: AdbInterface.cpp:410: Path:/Users/damith/Library/Android/sdk/platform-tools/adb protocol version: 41
+emulator: VERBOSE: AdbInterface.cpp:410: Path:/Users/damith/Library/Android/sdk/platform-tools/adb protocol version: 41
+emulator: No acpi ini file provided, using default
+
+emulator: _hwFingerprint_connect: connect finger print listen is called
+
+emulator: got message from guest system fingerprint HAL
+
+emulator: onGuestSendCommand: [0x7faa8f425250] Adb connected, start proxing data
+
+detox[9855] DEBUG: [EXEC_CMD, #3] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "getprop dev.bootcomplete"
+detox[9855] TRACE: [EXEC_SUCCESS, #3] 
+
+detox[9855] DEBUG: [EXEC_CMD, #4] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "getprop dev.bootcomplete"
+detox[9855] TRACE: [EXEC_SUCCESS, #4] 
+
+detox[9855] DEBUG: [EXEC_CMD, #5] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "getprop dev.bootcomplete"
+detox[9855] TRACE: [EXEC_SUCCESS, #5] 1
+
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ coldBoot: true, deviceId: 'emulator-11354', type: 'Nexus_S_API_29' })
+detox[9855] DEBUG: [EXEC_CMD, #6] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "getprop ro.build.version.sdk"
+detox[9855] TRACE: [EXEC_SUCCESS, #6] 29
+
+detox[9855] DEBUG: [EXEC_CMD, #7] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "settings put global animator_duration_scale 0"
+detox[9855] TRACE: [EXEC_SUCCESS, #7] 
+detox[9855] DEBUG: [EXEC_CMD, #8] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "settings put global window_animation_scale 0"
+detox[9855] TRACE: [EXEC_SUCCESS, #8] 
+detox[9855] DEBUG: [EXEC_CMD, #9] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "settings put global transition_animation_scale 0"
+detox[9855] TRACE: [EXEC_SUCCESS, #9] 
+detox[9855] DEBUG: [EXEC_CMD, #10] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+detox[9855] TRACE: [EXEC_SUCCESS, #10]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x1
+  mUserActivitySummary=0x1
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+
+detox[9855] DEBUG: [EXEC_CMD, #11] "/Users/damith/Library/Android/sdk/build-tools/30.0.2/aapt" dump badging "/Users/damith/devs/reactNative/HellowDetox/android/app/build/outputs/apk/debug/app-debug.apk" | grep -e "package: name="
+detox[9855] TRACE: [EXEC_SUCCESS, #11] package: name='com.hellowdetox' versionCode='1' versionName='1.0' compileSdkVersion='29' compileSdkVersionCodename='10'
+
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-11354', bundleId: 'com.hellowdetox' })
+detox[9855] DEBUG: [EXEC_CMD, #12] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "am force-stop com.hellowdetox"
+detox[9855] TRACE: [EXEC_SUCCESS, #12] 
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-11354', bundleId: 'com.hellowdetox' })
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeUninstallApp({ deviceId: 'emulator-11354', bundleId: 'com.hellowdetox' })
+detox[9855] DEBUG: [EXEC_CMD, #13] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "pm list packages com.hellowdetox"
+detox[9855] TRACE: [EXEC_SUCCESS, #13] package:com.hellowdetox
+package:com.hellowdetox.test
+
+detox[9855] DEBUG: [EXEC_CMD, #14] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 uninstall com.hellowdetox
+detox[9855] TRACE: [EXEC_SUCCESS, #14] Success
+
+detox[9855] DEBUG: [EXEC_CMD, #15] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "pm list packages com.hellowdetox.test"
+detox[9855] TRACE: [EXEC_SUCCESS, #15] package:com.hellowdetox.test
+
+detox[9855] DEBUG: [EXEC_CMD, #16] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 uninstall com.hellowdetox.test
+detox[9855] TRACE: [EXEC_SUCCESS, #16] Success
+
+detox[9855] DEBUG: [EXEC_CMD, #17] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "rm -fr /data/local/tmp/detox"
+detox[9855] TRACE: [EXEC_SUCCESS, #17] 
+detox[9855] DEBUG: [EXEC_CMD, #18] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "mkdir -p /data/local/tmp/detox"
+detox[9855] TRACE: [EXEC_SUCCESS, #18] 
+detox[9855] DEBUG: [EXEC_CMD, #19] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 push "/Users/damith/devs/reactNative/HellowDetox/android/app/build/outputs/apk/debug/app-debug.apk" "/data/local/tmp/detox/Application.apk"
+detox[9855] TRACE: [EXEC_SUCCESS, #19] /Users/damith/devs/reactNative/HellowDetox/android/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 114.2 MB/s (40347845 bytes in 0.337s)
+
+detox[9855] DEBUG: [EXEC_CMD, #20] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "pm install -r -g -t /data/local/tmp/detox/Application.apk"
+detox[9855] TRACE: [EXEC_SUCCESS, #20] Success
+
+detox[9855] DEBUG: [EXEC_CMD, #21] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 push "/Users/damith/devs/reactNative/HellowDetox/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+detox[9855] TRACE: [EXEC_SUCCESS, #21] /Users/damith/devs/reactNative/HellowDetox/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk: 1 file pushed, 0 skipped. 29.9 MB/s (9175 bytes in 0.000s)
+
+detox[9855] DEBUG: [EXEC_CMD, #22] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "pm install -r -g -t /data/local/tmp/detox/Test.apk"
+detox[9855] TRACE: [EXEC_SUCCESS, #22] Success
+
+ROOT_DESCRIBE_BLOCK[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'ROOT_DESCRIBE_BLOCK' })
+Example[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'Example' })
+detox[9855] INFO:  [97mExample[39m is assigned to [94memulator-11354 (Nexus_S_API_29)[39m
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-11354', bundleId: 'com.hellowdetox' })
+detox[9855] DEBUG: [EXEC_CMD, #23] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "am force-stop com.hellowdetox"
+detox[9855] TRACE: [EXEC_SUCCESS, #23] 
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-11354', bundleId: 'com.hellowdetox' })
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeLaunchApp({
+  deviceId: 'emulator-11354',
+  bundleId: 'com.hellowdetox',
+  launchArgs: {
+    detoxServer: 'ws://localhost:51502',
+    detoxSessionId: '42aecc5a-7547-608b-dc54-6067fe336112'
+  }
+})
+detox[9855] DEBUG: [EXEC_CMD, #24] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "date +\"%m-%d %T.000\""
+detox[9855] TRACE: [EXEC_SUCCESS, #24] 05-05 18:20:38.000
+
+detox[9855] DEBUG: [EXEC_CMD, #25] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 reverse tcp:51502 tcp:51502
+detox[9855] TRACE: [EXEC_SUCCESS, #25] 51502
+
+detox[9855] DEBUG: [EXEC_CMD, #26] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "pm list instrumentation"
+detox[9855] TRACE: [EXEC_SUCCESS, #26] instrumentation:com.hellowdetox.test/androidx.test.runner.AndroidJUnitRunner (target=com.hellowdetox)
+
+detox[9855] DEBUG: [SPAWN_CMD, #9899] /Users/damith/Library/Android/sdk/platform-tools/adb -s emulator-11354 shell am instrument -w -r -e detoxServer ws://localhost:51502 -e detoxSessionId 42aecc5a-7547-608b-dc54-6067fe336112 -e debug false com.hellowdetox.test/androidx.test.runner.AndroidJUnitRunner
+detox[9855] DEBUG: [EXEC_CMD, #27] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] TRACE: [SPAWN_STDOUT, #9899] INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
+
+detox[9855] DEBUG: [SPAWN_END, #9899] /Users/damith/Library/Android/sdk/platform-tools/adb -s emulator-11354 shell am instrument -w -r -e detoxServer ws://localhost:51502 -e detoxSessionId 42aecc5a-7547-608b-dc54-6067fe336112 -e debug false com.hellowdetox.test/androidx.test.runner.AndroidJUnitRunner finished with code = 0
+detox[9855] DEBUG: [EXEC_CMD, #28] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 reverse --remove tcp:51502
+detox[9855] TRACE: [EXEC_SUCCESS, #28] 
+detox[9855] ERROR: [EXEC_FAIL, #27] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #27] 
+detox[9855] ERROR: [EXEC_FAIL, #27] 
+detox[9855] DEBUG: [EXEC_CMD, #29] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #29] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #29] 
+detox[9855] ERROR: [EXEC_FAIL, #29] 
+detox[9855] DEBUG: [EXEC_CMD, #30] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #30] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #30] 
+detox[9855] ERROR: [EXEC_FAIL, #30] 
+detox[9855] DEBUG: [EXEC_CMD, #31] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #31] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #31] 
+detox[9855] ERROR: [EXEC_FAIL, #31] 
+detox[9855] DEBUG: [EXEC_CMD, #32] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #32] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #32] 
+detox[9855] ERROR: [EXEC_FAIL, #32] 
+detox[9855] DEBUG: [EXEC_CMD, #33] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #33] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #33] 
+detox[9855] ERROR: [EXEC_FAIL, #33] 
+detox[9855] DEBUG: [EXEC_CMD, #34] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #34] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #34] 
+detox[9855] ERROR: [EXEC_FAIL, #34] 
+detox[9855] DEBUG: [EXEC_CMD, #35] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #35] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #35] 
+detox[9855] ERROR: [EXEC_FAIL, #35] 
+detox[9855] DEBUG: [EXEC_CMD, #36] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #36] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #36] 
+detox[9855] ERROR: [EXEC_FAIL, #36] 
+detox[9855] DEBUG: [EXEC_CMD, #37] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #37] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #37] 
+detox[9855] ERROR: [EXEC_FAIL, #37] 
+detox[9855] DEBUG: [EXEC_CMD, #38] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #38] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #38] 
+detox[9855] ERROR: [EXEC_FAIL, #38] 
+detox[9855] DEBUG: [EXEC_CMD, #39] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #39] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #39] 
+detox[9855] ERROR: [EXEC_FAIL, #39] 
+detox[9855] DEBUG: [EXEC_CMD, #40] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #40] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #40] 
+detox[9855] ERROR: [EXEC_FAIL, #40] 
+detox[9855] DEBUG: [EXEC_CMD, #41] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #41] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #41] 
+detox[9855] ERROR: [EXEC_FAIL, #41] 
+detox[9855] DEBUG: [EXEC_CMD, #42] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #42] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #42] 
+detox[9855] ERROR: [EXEC_FAIL, #42] 
+detox[9855] DEBUG: [EXEC_CMD, #43] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #43] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #43] 
+detox[9855] ERROR: [EXEC_FAIL, #43] 
+detox[9855] DEBUG: [EXEC_CMD, #44] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #44] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #44] 
+detox[9855] ERROR: [EXEC_FAIL, #44] 
+detox[9855] DEBUG: [EXEC_CMD, #45] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #45] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #45] 
+detox[9855] ERROR: [EXEC_FAIL, #45] 
+detox[9855] DEBUG: [EXEC_CMD, #46] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #46] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #46] 
+detox[9855] ERROR: [EXEC_FAIL, #46] 
+detox[9855] DEBUG: [EXEC_CMD, #47] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #47] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #47] 
+detox[9855] ERROR: [EXEC_FAIL, #47] 
+detox[9855] DEBUG: [EXEC_CMD, #48] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #48] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #48] 
+detox[9855] ERROR: [EXEC_FAIL, #48] 
+detox[9855] DEBUG: [EXEC_CMD, #49] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #49] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #49] 
+detox[9855] ERROR: [EXEC_FAIL, #49] 
+detox[9855] DEBUG: [EXEC_CMD, #50] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #50] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #50] 
+detox[9855] ERROR: [EXEC_FAIL, #50] 
+detox[9855] DEBUG: [EXEC_CMD, #51] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #51] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #51] 
+detox[9855] ERROR: [EXEC_FAIL, #51] 
+detox[9855] DEBUG: [EXEC_CMD, #52] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #52] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #52] 
+detox[9855] ERROR: [EXEC_FAIL, #52] 
+detox[9855] DEBUG: [EXEC_CMD, #53] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #53] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #53] 
+detox[9855] ERROR: [EXEC_FAIL, #53] 
+detox[9855] DEBUG: [EXEC_CMD, #54] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #54] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #54] 
+detox[9855] ERROR: [EXEC_FAIL, #54] 
+detox[9855] DEBUG: [EXEC_CMD, #55] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #55] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #55] 
+detox[9855] ERROR: [EXEC_FAIL, #55] 
+detox[9855] DEBUG: [EXEC_CMD, #56] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #56] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #56] 
+detox[9855] ERROR: [EXEC_FAIL, #56] 
+detox[9855] DEBUG: [EXEC_CMD, #57] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #57] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #57] 
+detox[9855] ERROR: [EXEC_FAIL, #57] 
+detox[9855] DEBUG: [EXEC_CMD, #58] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #58] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #58] 
+detox[9855] ERROR: [EXEC_FAIL, #58] 
+detox[9855] DEBUG: [EXEC_CMD, #59] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #59] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #59] 
+detox[9855] ERROR: [EXEC_FAIL, #59] 
+detox[9855] DEBUG: [EXEC_CMD, #60] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #60] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #60] 
+detox[9855] ERROR: [EXEC_FAIL, #60] 
+detox[9855] DEBUG: [EXEC_CMD, #61] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #61] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #61] 
+detox[9855] ERROR: [EXEC_FAIL, #61] 
+detox[9855] DEBUG: [EXEC_CMD, #62] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #62] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #62] 
+detox[9855] ERROR: [EXEC_FAIL, #62] 
+detox[9855] DEBUG: [EXEC_CMD, #63] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #63] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #63] 
+detox[9855] ERROR: [EXEC_FAIL, #63] 
+detox[9855] DEBUG: [EXEC_CMD, #64] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #64] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #64] 
+detox[9855] ERROR: [EXEC_FAIL, #64] 
+detox[9855] DEBUG: [EXEC_CMD, #65] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #65] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #65] 
+detox[9855] ERROR: [EXEC_FAIL, #65] 
+detox[9855] DEBUG: [EXEC_CMD, #66] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #66] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #66] 
+detox[9855] ERROR: [EXEC_FAIL, #66] 
+detox[9855] DEBUG: [EXEC_CMD, #67] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #67] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #67] 
+detox[9855] ERROR: [EXEC_FAIL, #67] 
+detox[9855] DEBUG: [EXEC_CMD, #68] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #68] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #68] 
+detox[9855] ERROR: [EXEC_FAIL, #68] 
+detox[9855] DEBUG: [EXEC_CMD, #69] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #69] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #69] 
+detox[9855] ERROR: [EXEC_FAIL, #69] 
+detox[9855] DEBUG: [EXEC_CMD, #70] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #70] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #70] 
+detox[9855] ERROR: [EXEC_FAIL, #70] 
+detox[9855] DEBUG: [EXEC_CMD, #71] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #71] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #71] 
+detox[9855] ERROR: [EXEC_FAIL, #71] 
+detox[9855] DEBUG: [EXEC_CMD, #72] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #72] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #72] 
+detox[9855] ERROR: [EXEC_FAIL, #72] 
+detox[9855] DEBUG: [EXEC_CMD, #73] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #73] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #73] 
+detox[9855] ERROR: [EXEC_FAIL, #73] 
+detox[9855] DEBUG: [EXEC_CMD, #74] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #74] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #74] 
+detox[9855] ERROR: [EXEC_FAIL, #74] 
+detox[9855] DEBUG: [EXEC_CMD, #75] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #75] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #75] 
+detox[9855] ERROR: [EXEC_FAIL, #75] 
+detox[9855] DEBUG: [EXEC_CMD, #76] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #76] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #76] 
+detox[9855] ERROR: [EXEC_FAIL, #76] 
+detox[9855] DEBUG: [EXEC_CMD, #77] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+detox[9855] ERROR: [EXEC_FAIL, #77] ""/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""" failed with error = ChildProcessError: Command failed: "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""
+ `"/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps | grep \"com\.hellowdetox$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+detox[9855] ERROR: [EXEC_FAIL, #77] 
+detox[9855] ERROR: [EXEC_FAIL, #77] 
+detox[9855] DEBUG: [EXEC_CMD, #78] "/Users/damith/Library/Android/sdk/platform-tools/adb" -s emulator-11354 shell "ps"
+detox[9855] TRACE: [EXEC_SUCCESS, #78] USER           PID  PPID     VSZ    RSS WCHAN            ADDR S NAME                       
+root             1     0   31788   6660 0                   0 S init
+root             2     0       0      0 0                   0 S [kthreadd]
+root             3     2       0      0 0                   0 I [kworker/0:0]
+root             4     2       0      0 0                   0 I [kworker/0:0H]
+root             5     2       0      0 0                   0 I [kworker/u8:0]
+root             6     2       0      0 0                   0 I [mm_percpu_wq]
+root             7     2       0      0 0                   0 S [ksoftirqd/0]
+root             8     2       0      0 0                   0 I [rcu_preempt]
+root             9     2       0      0 0                   0 I [rcu_sched]
+root            10     2       0      0 0                   0 I [rcu_bh]
+root            11     2       0      0 0                   0 S [migration/0]
+root            12     2       0      0 0                   0 S [watchdog/0]
+root            13     2       0      0 0                   0 S [cpuhp/0]
+root            14     2       0      0 0                   0 S [cpuhp/1]
+root            15     2       0      0 0                   0 S [watchdog/1]
+root            16     2       0      0 0                   0 S [migration/1]
+root            17     2       0      0 0                   0 S [ksoftirqd/1]
+root            18     2       0      0 0                   0 I [kworker/1:0]
+root            19     2       0      0 0                   0 I [kworker/1:0H]
+root            20     2       0      0 0                   0 S [cpuhp/2]
+root            21     2       0      0 0                   0 S [watchdog/2]
+root            22     2       0      0 0                   0 S [migration/2]
+root            23     2       0      0 0                   0 S [ksoftirqd/2]
+root            24     2       0      0 0                   0 I [kworker/2:0]
+root            25     2       0      0 0                   0 I [kworker/2:0H]
+root            26     2       0      0 0                   0 S [cpuhp/3]
+root            27     2       0      0 0                   0 S [watchdog/3]
+root            28     2       0      0 0                   0 S [migration/3]
+root            29     2       0      0 0                   0 S [ksoftirqd/3]
+root            30     2       0      0 0                   0 I [kworker/3:0]
+root            31     2       0      0 0                   0 I [kworker/3:0H]
+root            32     2       0      0 0                   0 I [netns]
+root            33     2       0      0 0                   0 I [kworker/u8:1]
+root            38     2       0      0 0                   0 I [kworker/2:1]
+root            46     2       0      0 0                   0 I [kworker/0:1]
+root            47     2       0      0 0                   0 I [kworker/3:1]
+root            51     2       0      0 0                   0 I [kworker/1:1]
+root            98     2       0      0 0                   0 I [kworker/u8:2]
+root           118     2       0      0 0                   0 I [kworker/u8:3]
+root           119     2       0      0 0                   0 S [khungtaskd]
+root           121     2       0      0 0                   0 I [kworker/u8:4]
+root           123     2       0      0 0                   0 S [oom_reaper]
+root           125     2       0      0 0                   0 I [writeback]
+root           348     2       0      0 0                   0 S [kcompactd0]
+root           349     2       0      0 0                   0 S [ksmd]
+root           350     2       0      0 0                   0 S [khugepaged]
+root           351     2       0      0 0                   0 I [crypto]
+root           353     2       0      0 0                   0 I [kblockd]
+root           484     2       0      0 0                   0 I [md]
+root           497     2       0      0 0                   0 I [cfg80211]
+root           533     2       0      0 0                   0 S [kauditd]
+root           539     2       0      0 0                   0 S [kswapd0]
+root           578     2       0      0 0                   0 I [kworker/u9:0]
+root           790     2       0      0 0                   0 S [hwrng]
+root           846     2       0      0 0                   0 I [kworker/1:1H]
+root           982     2       0      0 0                   0 I [dm_bufio_cache]
+root          1059     2       0      0 0                   0 S [ion_system_heap]
+root          1076     2       0      0 0                   0 I [kworker/0:2]
+root          1096     2       0      0 0                   0 I [ipv6_addrconf]
+root          1267     2       0      0 0                   0 I [kdmflush]
+root          1269     2       0      0 0                   0 I [bioset]
+root          1274     2       0      0 0                   0 I [kdmflush]
+root          1275     2       0      0 0                   0 I [bioset]
+root          1280     2       0      0 0                   0 I [kworker/1:2]
+root          1283     2       0      0 0                   0 I [kdmflush]
+root          1285     2       0      0 0                   0 I [bioset]
+root          1286     2       0      0 0                   0 I [kverityd]
+root          1287     2       0      0 0                   0 I [bioset]
+root          1288     2       0      0 0                   0 I [bioset]
+root          1291     2       0      0 0                   0 I [bioset]
+root          1295     2       0      0 0                   0 I [kworker/0:1H]
+root          1296     2       0      0 0                   0 I [kworker/2:1H]
+root          1297     2       0      0 0                   0 I [ext4-rsv-conver]
+root          1300     2       0      0 0                   0 I [ext4-rsv-conver]
+root          1301     1   15600   4844 0                   0 S init
+root          1302     1   15088   4944 0                   0 S init
+root          1303     2       0      0 0                   0 I [kworker/3:1H]
+root          1304     1   16368   5892 0                   0 S ueventd
+logd          1651     1   22376   5488 0                   0 S logd
+system        1652     1   11492   3604 0                   0 S servicemanager
+system        1653     1   17036   5612 0                   0 S hwservicemanager
+system        1654     1   12232   2100 0                   0 S vndservicemanager
+root          1660     1   27008   6828 0                   0 S vold
+root          1670     2       0      0 0                   0 S [jbd2/vdc-8]
+root          1671     2       0      0 0                   0 I [ext4-rsv-conver]
+nobody        1711     1   15372   6176 0                   0 S android.hardware.keymaster@3.0-service
+root          1723     1   20836   6252 0                   0 S apexd
+root          1724     2       0      0 0                   0 I [kworker/u9:1]
+root          1749     1   38296   8396 0                   0 S netd
+root          1750     1 1734600 190988 0                   0 S zygote
+system        1753     1   14116   4628 0                   0 S android.hidl.allocator@1.0-service
+system        1754     1   20304   6308 0                   0 S android.system.suspend@1.0-service
+root          1755     1   12576   3988 0                   0 S healthd
+audioserver   1756     1   33584  11984 0                   0 S android.hardware.audio@2.0-service
+audioserver   1757     1   17060   4716 0                   0 S android.hardware.broadcastradio@1.1-service
+cameraserver  1758     1   32268  10960 0                   0 S android.hardware.camera.provider@2.4-service
+media         1759     1   17704   4876 0                   0 S android.hardware.cas@1.1-service
+system        1760     1   17780   4752 0                   0 S android.hardware.configstore@1.1-service
+media         1761     1   22908   7012 0                   0 S android.hardware.drm@1.0-service
+media         1762     1   20056   6004 0                   0 S android.hardware.drm@1.2-service.clearkey
+media         1763     1   22280   7268 0                   0 S android.hardware.drm@1.2-service.widevine
+system        1764     1   15100   4676 0                   0 S android.hardware.gatekeeper@1.0-service
+gps           1766     1   19232   5812 0                   0 S android.hardware.gnss@1.0-service
+system        1768     1   33920  12920 0                   0 S android.hardware.graphics.allocator@2.0-service
+system        1769     1   53212  15328 0                   0 S android.hardware.graphics.composer@2.1-service
+system        1770     1   13536   4720 0                   0 S android.hardware.health@2.0-service.goldfish
+system        1771     1   13372   4680 0                   0 S android.hardware.power@1.1-service.ranchu
+system        1772     1   16512   5372 0                   0 S android.hardware.sensors@1.0-service
+system        1773     1   13480   4608 0                   0 S android.hardware.thermal@2.0-service.mock
+wifi          1775     1   20084   6896 0                   0 S android.hardware.wifi@1.0-service
+root          1778     1   10572   2260 0                   0 S qemu-props
+nobody        1779     1   11708   3920 0                   0 S ashmemd
+audioserver   1780     1   63208  21988 0                   0 S audioserver
+gpu_service   1781     1   17436   5152 0                   0 S gpuservice
+lmkd          1782     1   10420   2644 0                   0 S lmkd
+system        1783     1  114484  29552 0                   0 S surfaceflinger
+root          1789     2       0      0 0                   0 S [psimon]
+root          1801     1   10184    144 0                   0 S createns
+logd          1804     1   10476   2656 0                   0 S logcat
+shell         1812     1   40488   6120 0                   0 S adbd
+nobody        1814     1   14208   3860 0                   0 S traced
+nobody        1819     1   14208   3816 0                   0 S traced_probes
+cameraserver  1823     1   46880  16736 0                   0 S cameraserver
+drm           1828     1   31148  12724 0                   0 S drmserver
+root          1829     2       0      0 0                   0 I [kworker/u8:5]
+system        1831     1   29036   9996 0                   0 S idmap2d
+incidentd     1839     1   17512   5404 0                   0 S incidentd
+root          1840     1   19868   6276 0                   0 S installd
+keystore      1841     1   21320   8808 0                   0 S keystore
+mdnsr         1842     1    3896   1140 0                   0 S mdnsd
+media         1844     1   18900   7528 0                   0 S mediadrmserver
+mediaex       1845     1   63608  22856 0                   0 S media.extractor
+media         1846     1   31460  12992 0                   0 S media.metrics
+media         1847     1   68860  20016 0                   0 S mediaserver
+statsd        1848     1   23852   7036 0                   0 S statsd
+root          1851     1   20236   5180 0                   0 S storaged
+wifi          1852     1   14720   5444 0                   0 S wificond
+mediacodec    1856     1   45548  15408 0                   0 S media.codec
+radio         1858     1   25872   7636 0                   0 S rild
+mediacodec    1859     1   40852  12780 0                   0 S media.swcodec
+system        1860     1   17092   6000 0                   0 S gatekeeperd
+tombstoned    1862     1    9692   2364 0                   0 S tombstoned
+system        1866     1   14492   4964 0                   0 S android.hardware.biometrics.fingerprint@2.1-service
+root          1867  1749    9680   3172 0                   0 S iptables-restore
+root          1868  1749   10972   3600 0                   0 S ip6tables-restore
+llkd          1898     1    9908   2556 0                   0 S llkd
+root          1910     1   10800   2716 0                   0 S netmgr
+root          1915     1   12200   3076 0                   0 S wifi_forwarder
+wifi          1918     1   13420   4216 0                   0 S hostapd_nohidl
+root          1925     2       0      0 0                   0 I [kworker/2:2]
+root          1927     1   10204   2636 0                   0 S dhcpclient
+root          1977     2       0      0 0                   0 I [kworker/3:2]
+root          1978     2       0      0 0                   0 I [kworker/3:3]
+system        1989  1750 2227816 256484 0                   0 S system_server
+root          2051     2       0      0 0                   0 I [kworker/u9:2]
+root          2052     2       0      0 0                   0 I [kworker/u9:3]
+u0_a94        2123  1750 2003460 194088 0                   0 S com.android.systemui
+network_stack 2223  1750 1860192 101176 0                   0 S com.google.android.networkstack
+webview_zygote 2266 1750 1736836  59360 0                   0 S webview_zygote
+wifi          2306     1   21492   9340 0                   0 S wpa_supplicant
+radio         2307  1750 1897936 116652 0                   0 S com.android.phone
+u0_a46        2364  1750 1857572  86480 0                   0 S com.google.android.ext.services
+u0_a102       2397  1750 1924168 136092 0                   0 S com.google.android.apps.nexuslauncher
+u0_a129       2433  1750 1972508 141392 0                   0 S com.google.android.inputmethod.latin
+u0_a108       2539  1750 1976576 181724 0                   0 S com.google.android.gms.persistent
+u0_a108       2701  1750 2105472 183404 0                   0 S com.google.android.gms
+u0_a100       2755  1750 1936228 114820 0                   0 S com.google.android.googlequicksearchbox:interactor
+secure_element 2782 1750 1842532  73988 0                   0 S com.android.se
+radio         2825  1750 1843100  77608 0                   0 S com.android.ims.rcsservice
+system        2850  1750 1842504  84768 0                   0 S com.android.emulator.multidisplay
+u0_a108       2876  1750 1861676  91648 0                   0 S com.google.process.gservices
+u0_a68        2936  1750 1839112  71308 0                   0 S com.android.smspush
+u0_a100       2957  1750 2041388 200528 0                   0 S com.google.android.googlequicksearchbox:search
+u0_a108       3088  1750 1856144  95200 0                   0 S com.google.process.gapps
+u0_a45        3226  1750 1851280 104620 0                   0 S android.process.media
+u0_a52        3301  1750 1850848  87484 0                   0 S com.google.android.permissioncontroller
+u0_a53        3493  1750 1844372  82612 0                   0 S com.android.providers.calendar
+u0_a114       3684  1750 1943460 145920 0                   0 S com.google.android.apps.messaging
+u0_a98        3802  1750 1886796 118636 0                   0 S com.google.android.ims
+u0_a51        4314  1750 1842008  72424 0                   0 S com.google.android.packageinstaller
+u0_a95        4338  1750 1845472  82976 0                   0 S com.google.android.partnersetup
+u0_a108       4497  1750 1945372 149136 0                   0 S com.google.android.gms.unstable
+u0_a112       4635  1750 1889800 113744 0                   0 S com.google.android.videos
+u0_a45        4935  1750 1840404  78376 0                   0 S com.android.mtp
+u0_a117       4960  1750 1944820 132104 0                   0 S com.google.android.apps.docs
+u0_a93        5029  1750 1859940  96812 0                   0 S com.android.dialer
+u0_a111       5063  1750 1935312 132604 0                   0 S com.google.android.apps.maps
+u0_a130       5110  1750 1878628 100992 0                   0 S com.google.android.calendar
+u0_a119       5148  1750 1891800 106532 0                   0 S com.google.android.gm
+u0_a108       5217  1750 1908444 126152 0                   0 S com.google.android.gms:car
+system        5360  1750 1840716  78804 0                   0 S com.android.keychain
+u0_a43        5628  1750 1856852  98152 0                   0 S android.process.acore
+shell         5760  1812   11936   3076 0                   0 R ps
+
+detox[9855] WARN:  [AndroidDriver.js] USER           PID  PPID     VSZ    RSS WCHAN            ADDR S NAME                       
+root             1     0   31788   6660 0                   0 S init
+root             2     0       0      0 0                   0 S [kthreadd]
+root             3     2       0      0 0                   0 I [kworker/0:0]
+root             4     2       0      0 0                   0 I [kworker/0:0H]
+root             5     2       0      0 0                   0 I [kworker/u8:0]
+root             6     2       0      0 0                   0 I [mm_percpu_wq]
+root             7     2       0      0 0                   0 S [ksoftirqd/0]
+root             8     2       0      0 0                   0 I [rcu_preempt]
+root             9     2       0      0 0                   0 I [rcu_sched]
+root            10     2       0      0 0                   0 I [rcu_bh]
+root            11     2       0      0 0                   0 S [migration/0]
+root            12     2       0      0 0                   0 S [watchdog/0]
+root            13     2       0      0 0                   0 S [cpuhp/0]
+root            14     2       0      0 0                   0 S [cpuhp/1]
+root            15     2       0      0 0                   0 S [watchdog/1]
+root            16     2       0      0 0                   0 S [migration/1]
+root            17     2       0      0 0                   0 S [ksoftirqd/1]
+root            18     2       0      0 0                   0 I [kworker/1:0]
+root            19     2       0      0 0                   0 I [kworker/1:0H]
+root            20     2       0      0 0                   0 S [cpuhp/2]
+root            21     2       0      0 0                   0 S [watchdog/2]
+root            22     2       0      0 0                   0 S [migration/2]
+root            23     2       0      0 0                   0 S [ksoftirqd/2]
+root            24     2       0      0 0                   0 I [kworker/2:0]
+root            25     2       0      0 0                   0 I [kworker/2:0H]
+root            26     2       0      0 0                   0 S [cpuhp/3]
+root            27     2       0      0 0                   0 S [watchdog/3]
+root            28     2       0      0 0                   0 S [migration/3]
+root            29     2       0      0 0                   0 S [ksoftirqd/3]
+root            30     2       0      0 0                   0 I [kworker/3:0]
+root            31     2       0      0 0                   0 I [kworker/3:0H]
+root            32     2       0      0 0                   0 I [netns]
+root            33     2       0      0 0                   0 I [kworker/u8:1]
+root            38     2       0      0 0                   0 I [kworker/2:1]
+root            46     2       0      0 0                   0 I [kworker/0:1]
+root            47     2       0      0 0                   0 I [kworker/3:1]
+root            51     2       0      0 0                   0 I [kworker/1:1]
+root            98     2       0      0 0                   0 I [kworker/u8:2]
+root           118     2       0      0 0                   0 I [kworker/u8:3]
+root           119     2       0      0 0                   0 S [khungtaskd]
+root           121     2       0      0 0                   0 I [kworker/u8:4]
+root           123     2       0      0 0                   0 S [oom_reaper]
+root           125     2       0      0 0                   0 I [writeback]
+root           348     2       0      0 0                   0 S [kcompactd0]
+root           349     2       0      0 0                   0 S [ksmd]
+root           350     2       0      0 0                   0 S [khugepaged]
+root           351     2       0      0 0                   0 I [crypto]
+root           353     2       0      0 0                   0 I [kblockd]
+root           484     2       0      0 0                   0 I [md]
+root           497     2       0      0 0                   0 I [cfg80211]
+root           533     2       0      0 0                   0 S [kauditd]
+root           539     2       0      0 0                   0 S [kswapd0]
+root           578     2       0      0 0                   0 I [kworker/u9:0]
+root           790     2       0      0 0                   0 S [hwrng]
+root           846     2       0      0 0                   0 I [kworker/1:1H]
+root           982     2       0      0 0                   0 I [dm_bufio_cache]
+root          1059     2       0      0 0                   0 S [ion_system_heap]
+root          1076     2       0      0 0                   0 I [kworker/0:2]
+root          1096     2       0      0 0                   0 I [ipv6_addrconf]
+root          1267     2       0      0 0                   0 I [kdmflush]
+root          1269     2       0      0 0                   0 I [bioset]
+root          1274     2       0      0 0                   0 I [kdmflush]
+root          1275     2       0      0 0                   0 I [bioset]
+root          1280     2       0      0 0                   0 I [kworker/1:2]
+root          1283     2       0      0 0                   0 I [kdmflush]
+root          1285     2       0      0 0                   0 I [bioset]
+root          1286     2       0      0 0                   0 I [kverityd]
+root          1287     2       0      0 0                   0 I [bioset]
+root          1288     2       0      0 0                   0 I [bioset]
+root          1291     2       0      0 0                   0 I [bioset]
+root          1295     2       0      0 0                   0 I [kworker/0:1H]
+root          1296     2       0      0 0                   0 I [kworker/2:1H]
+root          1297     2       0      0 0                   0 I [ext4-rsv-conver]
+root          1300     2       0      0 0                   0 I [ext4-rsv-conver]
+root          1301     1   15600   4844 0                   0 S init
+root          1302     1   15088   4944 0                   0 S init
+root          1303     2       0      0 0                   0 I [kworker/3:1H]
+root          1304     1   16368   5892 0                   0 S ueventd
+logd          1651     1   22376   5488 0                   0 S logd
+system        1652     1   11492   3604 0                   0 S servicemanager
+system        1653     1   17036   5612 0                   0 S hwservicemanager
+system        1654     1   12232   2100 0                   0 S vndservicemanager
+root          1660     1   27008   6828 0                   0 S vold
+root          1670     2       0      0 0                   0 S [jbd2/vdc-8]
+root          1671     2       0      0 0                   0 I [ext4-rsv-conver]
+nobody        1711     1   15372   6176 0                   0 S android.hardware.keymaster@3.0-service
+root          1723     1   20836   6252 0                   0 S apexd
+root          1724     2       0      0 0                   0 I [kworker/u9:1]
+root          1749     1   38296   8396 0                   0 S netd
+root          1750     1 1734600 190988 0                   0 S zygote
+system        1753     1   14116   4628 0                   0 S android.hidl.allocator@1.0-service
+system        1754     1   20304   6308 0                   0 S android.system.suspend@1.0-service
+root          1755     1   12576   3988 0                   0 S healthd
+audioserver   1756     1   33584  11984 0                   0 S android.hardware.audio@2.0-service
+audioserver   1757     1   17060   4716 0                   0 S android.hardware.broadcastradio@1.1-service
+cameraserver  1758     1   32268  10960 0                   0 S android.hardware.camera.provider@2.4-service
+media         1759     1   17704   4876 0                   0 S android.hardware.cas@1.1-service
+system        1760     1   17780   4752 0                   0 S android.hardware.configstore@1.1-service
+media         1761     1   22908   7012 0                   0 S android.hardware.drm@1.0-service
+media         1762     1   20056   6004 0                   0 S android.hardware.drm@1.2-service.clearkey
+media         1763     1   22280   7268 0                   0 S android.hardware.drm@1.2-service.widevine
+system        1764     1   15100   4676 0                   0 S android.hardware.gatekeeper@1.0-service
+gps           1766     1   19232   5812 0                   0 S android.hardware.gnss@1.0-service
+system        1768     1   33920  12920 0                   0 S android.hardware.graphics.allocator@2.0-service
+system        1769     1   53212  15328 0                   0 S android.hardware.graphics.composer@2.1-service
+system        1770     1   13536   4720 0                   0 S android.hardware.health@2.0-service.goldfish
+system        1771     1   13372   4680 0                   0 S android.hardware.power@1.1-service.ranchu
+system        1772     1   16512   5372 0                   0 S android.hardware.sensors@1.0-service
+system        1773     1   13480   4608 0                   0 S android.hardware.thermal@2.0-service.mock
+wifi          1775     1   20084   6896 0                   0 S android.hardware.wifi@1.0-service
+root          1778     1   10572   2260 0                   0 S qemu-props
+nobody        1779     1   11708   3920 0                   0 S ashmemd
+audioserver   1780     1   63208  21988 0                   0 S audioserver
+gpu_service   1781     1   17436   5152 0                   0 S gpuservice
+lmkd          1782     1   10420   2644 0                   0 S lmkd
+system        1783     1  114484  29552 0                   0 S surfaceflinger
+root          1789     2       0      0 0                   0 S [psimon]
+root          1801     1   10184    144 0                   0 S createns
+logd          1804     1   10476   2656 0                   0 S logcat
+shell         1812     1   40488   6120 0                   0 S adbd
+nobody        1814     1   14208   3860 0                   0 S traced
+nobody        1819     1   14208   3816 0                   0 S traced_probes
+cameraserver  1823     1   46880  16736 0                   0 S cameraserver
+drm           1828     1   31148  12724 0                   0 S drmserver
+root          1829     2       0      0 0                   0 I [kworker/u8:5]
+system        1831     1   29036   9996 0                   0 S idmap2d
+incidentd     1839     1   17512   5404 0                   0 S incidentd
+root          1840     1   19868   6276 0                   0 S installd
+keystore      1841     1   21320   8808 0                   0 S keystore
+mdnsr         1842     1    3896   1140 0                   0 S mdnsd
+media         1844     1   18900   7528 0                   0 S mediadrmserver
+mediaex       1845     1   63608  22856 0                   0 S media.extractor
+media         1846     1   31460  12992 0                   0 S media.metrics
+media         1847     1   68860  20016 0                   0 S mediaserver
+statsd        1848     1   23852   7036 0                   0 S statsd
+root          1851     1   20236   5180 0                   0 S storaged
+wifi          1852     1   14720   5444 0                   0 S wificond
+mediacodec    1856     1   45548  15408 0                   0 S media.codec
+radio         1858     1   25872   7636 0                   0 S rild
+mediacodec    1859     1   40852  12780 0                   0 S media.swcodec
+system        1860     1   17092   6000 0                   0 S gatekeeperd
+tombstoned    1862     1    9692   2364 0                   0 S tombstoned
+system        1866     1   14492   4964 0                   0 S android.hardware.biometrics.fingerprint@2.1-service
+root          1867  1749    9680   3172 0                   0 S iptables-restore
+root          1868  1749   10972   3600 0                   0 S ip6tables-restore
+llkd          1898     1    9908   2556 0                   0 S llkd
+root          1910     1   10800   2716 0                   0 S netmgr
+root          1915     1   12200   3076 0                   0 S wifi_forwarder
+wifi          1918     1   13420   4216 0                   0 S hostapd_nohidl
+root          1925     2       0      0 0                   0 I [kworker/2:2]
+root          1927     1   10204   2636 0                   0 S dhcpclient
+root          1977     2       0      0 0                   0 I [kworker/3:2]
+root          1978     2       0      0 0                   0 I [kworker/3:3]
+system        1989  1750 2227816 256484 0                   0 S system_server
+root          2051     2       0      0 0                   0 I [kworker/u9:2]
+root          2052     2       0      0 0                   0 I [kworker/u9:3]
+u0_a94        2123  1750 2003460 194088 0                   0 S com.android.systemui
+network_stack 2223  1750 1860192 101176 0                   0 S com.google.android.networkstack
+webview_zygote 2266 1750 1736836  59360 0                   0 S webview_zygote
+wifi          2306     1   21492   9340 0                   0 S wpa_supplicant
+radio         2307  1750 1897936 116652 0                   0 S com.android.phone
+u0_a46        2364  1750 1857572  86480 0                   0 S com.google.android.ext.services
+u0_a102       2397  1750 1924168 136092 0                   0 S com.google.android.apps.nexuslauncher
+u0_a129       2433  1750 1972508 141392 0                   0 S com.google.android.inputmethod.latin
+u0_a108       2539  1750 1976576 181724 0                   0 S com.google.android.gms.persistent
+u0_a108       2701  1750 2105472 183404 0                   0 S com.google.android.gms
+u0_a100       2755  1750 1936228 114820 0                   0 S com.google.android.googlequicksearchbox:interactor
+secure_element 2782 1750 1842532  73988 0                   0 S com.android.se
+radio         2825  1750 1843100  77608 0                   0 S com.android.ims.rcsservice
+system        2850  1750 1842504  84768 0                   0 S com.android.emulator.multidisplay
+u0_a108       2876  1750 1861676  91648 0                   0 S com.google.process.gservices
+u0_a68        2936  1750 1839112  71308 0                   0 S com.android.smspush
+u0_a100       2957  1750 2041388 200528 0                   0 S com.google.android.googlequicksearchbox:search
+u0_a108       3088  1750 1856144  95200 0                   0 S com.google.process.gapps
+u0_a45        3226  1750 1851280 104620 0                   0 S android.process.media
+u0_a52        3301  1750 1850848  87484 0                   0 S com.google.android.permissioncontroller
+u0_a53        3493  1750 1844372  82612 0                   0 S com.android.providers.calendar
+u0_a114       3684  1750 1943460 145920 0                   0 S com.google.android.apps.messaging
+u0_a98        3802  1750 1886796 118636 0                   0 S com.google.android.ims
+u0_a51        4314  1750 1842008  72424 0                   0 S com.google.android.packageinstaller
+u0_a95        4338  1750 1845472  82976 0                   0 S com.google.android.partnersetup
+u0_a108       4497  1750 1945372 149136 0                   0 S com.google.android.gms.unstable
+u0_a112       4635  1750 1889800 113744 0                   0 S com.google.android.videos
+u0_a45        4935  1750 1840404  78376 0                   0 S com.android.mtp
+u0_a117       4960  1750 1944820 132104 0                   0 S com.google.android.apps.docs
+u0_a93        5029  1750 1859940  96812 0                   0 S com.android.dialer
+u0_a111       5063  1750 1935312 132604 0                   0 S com.google.android.apps.maps
+u0_a130       5110  1750 1878628 100992 0                   0 S com.google.android.calendar
+u0_a119       5148  1750 1891800 106532 0                   0 S com.google.android.gm
+u0_a108       5217  1750 1908444 126152 0                   0 S com.google.android.gms:car
+system        5360  1750 1840716  78804 0                   0 S com.android.keychain
+u0_a43        5628  1750 1856852  98152 0                   0 S android.process.acore
+shell         5760  1812   11936   3076 0                   0 R ps
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onHookFailure({
+  error: DetoxRuntimeError: PID still not available
+      at EmulatorDriver._queryPID (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/devices/drivers/android/AndroidDriver.js:338:13)
+      at retry (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/utils/retry.js:30:14)
+      at retry (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/utils/retry.js:30:14)
+      at EmulatorDriver._waitForProcess (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/devices/drivers/android/AndroidDriver.js:327:13)
+      at EmulatorDriver._handleLaunchApp (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/devices/drivers/android/AndroidDriver.js:124:17)
+      at EmulatorDriver.launchApp (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/devices/drivers/android/AndroidDriver.js:92:12)
+      at Device._doLaunchApp (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/devices/Device.js:334:35)
+      at traceCall (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/utils/trace.js:41:20),
+  hook: 'beforeAll'
+})
+detox[9855] INFO:  [1m[37mExample: [39m[22m[90mshould have welcome screen[39m
+detox[9855] INFO:  [1m[37mExample: [39m[22m[90mshould have welcome screen[39m[90m [[31mFAIL[90m][39m
+Example[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'Example' })
+ROOT_DESCRIBE_BLOCK[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'ROOT_DESCRIBE_BLOCK' })
+detox[9855] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+detox[9855] TRACE: [ARTIFACT_START] starting FileArtifact
+detox[9855] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+detox[9855] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts/android.2021-05-05 12-50-15Z/detox_pid_9855.json.log { append: true }
+detox[9855] TRACE: [ARTIFACT_START] starting FileArtifact
+detox[9855] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+detox[9855] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts/android.2021-05-05 12-50-15Z/detox_pid_9855.log { append: true }
+detox[9855] DEBUG: [MOVE_FILE] moving "/private/var/folders/vr/plrnhmvs35lc5pswx55w9spc0000gn/T/cdd77223-23d3-4335-8808-7ce4d9c1153c.detox.log" to artifacts/android.2021-05-05 12-50-15Z/detox_pid_9855.json.log
+detox[9855] DEBUG: [MOVE_FILE] moving "/private/var/folders/vr/plrnhmvs35lc5pswx55w9spc0000gn/T/84e2c42a-126a-4934-bcc7-27b99163a583.detox.log" to artifacts/android.2021-05-05 12-50-15Z/detox_pid_9855.log
+detox[9855] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+detox[9855] TRACE: [SESSION_TORN] tester exited session 42aecc5a-7547-608b-dc54-6067fe336112

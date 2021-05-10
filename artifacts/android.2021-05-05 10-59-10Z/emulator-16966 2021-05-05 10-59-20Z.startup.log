@@ -1,0 +1,107 @@
+--------- beginning of main
+05-05 16:29:19.410 12224 12224 I zygote  : Not late-enabling -Xcheck:jni (already on)
+05-05 16:29:19.417 12224 12224 W zygote  : Unexpected CPU variant for X86 using defaults: x86
+05-05 16:29:19.439 12224 12224 I zygote  : The ClassLoaderContext is a special shared library.
+05-05 16:29:19.439 12224 12224 I zygote  : The ClassLoaderContext is a special shared library.
+05-05 16:29:19.440 12224 12224 W zygote  : ClassLoaderContext classpath element mismatch for position 0. expected=/system/framework/android.test.mock.jar, found=/system/framework/android.test.runner.jar (PCL[/system/framework/android.test.mock.jar*1065265343:/system/framework/android.test.runner.jar*1742119008] | PCL[/system/framework/android.test.runner.jar*1742119008:/system/framework/android.test.mock.jar*1065265343])
+05-05 16:29:19.440 12224 12224 W zygote  : Found duplicate classes, falling back to extracting from APK : /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk
+05-05 16:29:19.440 12224 12224 W zygote  : NOTE: This wastes RAM and hurts startup performance.
+05-05 16:29:19.440 12224 12224 W zygote  : Found duplicated class when checking oat files: 'Ljunit/runner/BaseTestRunner;' in /system/framework/android.test.runner.jar and /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!classes2.dex
+05-05 16:29:19.440 12224 12224 W zygote  : 
+05-05 16:29:19.514 12224 12224 W zygote  : ClassLoaderContext classpath size mismatch for position 0. expected=0, found=4 (PCL[] | PCL[/system/framework/android.test.runner.jar*1742119008:/system/framework/android.test.mock.jar*1065265343:/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk*3531511688:/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!classes2.dex*2662567364])
+05-05 16:29:19.522 12224 12224 W System  : ClassLoader referenced unknown path: 
+05-05 16:29:19.543 12224 12224 I MonitoringInstr: Instrumentation started!
+05-05 16:29:19.546 12224 12224 I MonitoringInstr: Setting context classloader to 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk", zip file "/data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86, /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk!/lib/x86, /system/lib, /vendor/lib]]]', Original: 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk", zip file "/data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86, /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk!/lib/x86, /system/lib, /vendor/lib]]]'
+05-05 16:29:19.549 12224 12224 D SoLoader: init start
+05-05 16:29:19.549 12224 12224 D SoLoader: adding system library source: /vendor/lib
+05-05 16:29:19.550 12224 12224 D SoLoader: adding system library source: /system/lib
+05-05 16:29:19.550 12224 12224 D SoLoader: adding application source: com.facebook.soloader.DirectorySoSource[root = /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86 flags = 0]
+05-05 16:29:19.551 12224 12224 D SoLoader: adding backup source from : com.facebook.soloader.ApkSoSource[root = /data/data/com.hellowdetox/lib-main flags = 1]
+05-05 16:29:19.551 12224 12224 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /system/lib flags = 2]
+05-05 16:29:19.552 12224 12224 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /vendor/lib flags = 2]
+05-05 16:29:19.552 12224 12224 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86 flags = 0]
+05-05 16:29:19.552 12224 12224 D SoLoader: Preparing SO source: com.facebook.soloader.ApkSoSource[root = /data/data/com.hellowdetox/lib-main flags = 1]
+05-05 16:29:19.555 12224 12224 V fb-UnpackingSoSource: locked dso store /data/user/0/com.hellowdetox/lib-main
+05-05 16:29:19.558 12224 12224 V fb-UnpackingSoSource: deps mismatch on deps store: regenerating
+05-05 16:29:19.558 12224 12224 V fb-UnpackingSoSource: so store dirty: regenerating
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libc++_shared.so: deferring to libdir
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libevent-2.1.so: deferring to libdir
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libevent_core-2.1.so: deferring to libdir
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libevent_extra-2.1.so: deferring to libdir
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libfb.so: deferring to libdir
+05-05 16:29:19.637 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libfbjni.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libflipper.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libfolly_futures.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libfolly_json.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libglog.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libglog_init.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libhermes-executor-common-debug.so: deferring to libdir
+05-05 16:29:19.638 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libhermes-executor-common-release.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libhermes-executor-debug.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libhermes-executor-release.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libhermes-inspector.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libimagepipeline.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libjsc.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libjscexecutor.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libjsijniprofiler.so: deferring to libdir
+05-05 16:29:19.639 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libjsinspector.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libnative-filters.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libnative-imagetranscoder.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreact_codegen_reactandroidspec.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreact_nativemodule_core.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreactnativeblob.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreactnativejni.so: deferring to libdir
+05-05 16:29:19.640 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreactnativeutilsjni.so: deferring to libdir
+05-05 16:29:19.641 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libreactperfloggerjni.so: deferring to libdir
+05-05 16:29:19.641 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libturbomodulejsijni.so: deferring to libdir
+05-05 16:29:19.641 12224 12224 D ApkSoSource: not allowing consideration of lib/x86/libyoga.so: deferring to libdir
+05-05 16:29:19.641 12224 12224 V fb-UnpackingSoSource: regenerating DSO store com.facebook.soloader.ApkSoSource
+05-05 16:29:19.642 12224 12224 V fb-UnpackingSoSource: Finished regenerating DSO store com.facebook.soloader.ApkSoSource
+05-05 16:29:19.643 12224 12224 V fb-UnpackingSoSource: starting syncer worker
+05-05 16:29:19.654 12224 12224 V fb-UnpackingSoSource: releasing dso store lock for /data/user/0/com.hellowdetox/lib-main (from syncer thread)
+05-05 16:29:19.654 12224 12224 V fb-UnpackingSoSource: not releasing dso store lock for /data/user/0/com.hellowdetox/lib-main (syncer thread started)
+05-05 16:29:19.654 12224 12224 D SoLoader: init finish: 4 SO sources prepared
+05-05 16:29:19.654 12224 12224 D SoLoader: init exiting
+05-05 16:29:19.656 12224 12224 D SoLoader: init exiting
+05-05 16:29:19.656 12224 12224 D SoLoader: About to load: libjscexecutor.so
+05-05 16:29:19.656 12224 12224 D SoLoader: libjscexecutor.so not found on /data/data/com.hellowdetox/lib-main
+05-05 16:29:19.657 12224 12224 D SoLoader: libjscexecutor.so found on /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86
+05-05 16:29:19.657 12224 12224 D SoLoader: Not resolving dependencies for libjscexecutor.so
+05-05 16:29:19.666 12224 12224 D JavaScriptCore.Version: 245459.0.0
+05-05 16:29:19.667 12224 12224 D SoLoader: Loaded: libjscexecutor.so
+05-05 16:29:19.668 12224 12224 D SoLoader: init exiting
+05-05 16:29:19.680 12224 12224 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+05-05 16:29:19.706 12224 12246 D SoLoader: About to load: libfbjni.so
+05-05 16:29:19.707 12224 12246 D SoLoader: libfbjni.so not found on /data/data/com.hellowdetox/lib-main
+05-05 16:29:19.707 12224 12246 D SoLoader: libfbjni.so found on /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86
+05-05 16:29:19.707 12224 12246 D SoLoader: Not resolving dependencies for libfbjni.so
+05-05 16:29:19.735 12224 12246 D SoLoader: Loaded: libfbjni.so
+05-05 16:29:19.735 12224 12246 D SoLoader: About to load: libflipper.so
+05-05 16:29:19.735 12224 12246 D SoLoader: libflipper.so not found on /data/data/com.hellowdetox/lib-main
+05-05 16:29:19.735 12224 12246 D SoLoader: libflipper.so found on /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86
+05-05 16:29:19.736 12224 12246 D SoLoader: Not resolving dependencies for libflipper.so
+05-05 16:29:19.778 12224 12246 D SoLoader: Loaded: libflipper.so
+05-05 16:29:19.790 12224 12224 I flipper : flipper: FlipperClient::addPlugin Inspector
+05-05 16:29:19.790 12224 12224 I flipper : flipper: FlipperClient::addPlugin React
+05-05 16:29:19.791 12224 12224 I flipper : flipper: FlipperClient::addPlugin Databases
+05-05 16:29:19.791 12224 12224 I flipper : flipper: FlipperClient::addPlugin Preferences
+05-05 16:29:19.792 12224 12224 I flipper : flipper: FlipperClient::addPlugin CrashReporter
+05-05 16:29:19.793 12224 12224 I flipper : flipper: FlipperClient::addPlugin Network
+05-05 16:29:19.795 12224 12224 I MonitoringInstr: No JSBridge.
+05-05 16:29:19.798 12224 12240 I MonitoringInstr: Setting context classloader to 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk", zip file "/data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86, /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk!/lib/x86, /system/lib, /vendor/lib]]]', Original: 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk", zip file "/data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/lib/x86, /data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk!/lib/x86, /data/app/com.hellowdetox-gldrEh1R_TMP8C2rY6uNfA==/base.apk!/lib/x86, /system/lib, /vendor/lib]]]'
+05-05 16:29:19.814 12224 12240 I UsageTrackerFacilitator: Usage tracking enabled
+05-05 16:29:19.819 12224 12240 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/com.hellowdetox.test-r-Ln5alo-t-TFVBx551sIw==/base.apk]
+05-05 16:29:19.820 12224 12240 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 16:29:19.909 12224 12229 I zygote  : Do partial code cache collection, code=29KB, data=21KB
+05-05 16:29:19.909 12224 12229 I zygote  : After code cache collection, code=29KB, data=21KB
+05-05 16:29:19.909 12224 12229 I zygote  : Increasing code cache capacity to 128KB
+05-05 16:29:20.057 12224 12229 I zygote  : Do partial code cache collection, code=57KB, data=35KB
+05-05 16:29:20.058 12224 12229 I zygote  : After code cache collection, code=57KB, data=35KB
+05-05 16:29:20.058 12224 12229 I zygote  : Increasing code cache capacity to 256KB
+05-05 16:29:20.274 12224 12240 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+05-05 16:29:20.275 12224 12240 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+05-05 16:29:20.275 12224 12240 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+05-05 16:29:20.276 12224 12240 I TestRunner: run started: 1 tests
+05-05 16:29:20.276 12224 12240 I TestRunner: run finished: 0 tests, 0 failed, 0 ignored
+05-05 16:29:20.448 12224 12224 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+05-05 16:29:20.448 12224 12240 I MonitoringInstr: waitForActivitiesToComplete() took: 0ms

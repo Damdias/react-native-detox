@@ -1,0 +1,380 @@
+--------- beginning of main
+05-05 07:09:06.609  6897  6897 I zygote  : Not late-enabling -Xcheck:jni (already on)
+05-05 07:09:06.618  6897  6897 W zygote  : Unexpected CPU variant for X86 using defaults: x86
+05-05 07:09:06.640  6897  6897 I zygote  : The ClassLoaderContext is a special shared library.
+05-05 07:09:06.641  6897  6897 I zygote  : The ClassLoaderContext is a special shared library.
+05-05 07:09:06.641  6897  6897 W zygote  : ClassLoaderContext classpath element mismatch for position 0. expected=/system/framework/android.test.mock.jar, found=/system/framework/android.test.runner.jar (PCL[/system/framework/android.test.mock.jar*1065265343:/system/framework/android.test.runner.jar*1742119008] | PCL[/system/framework/android.test.runner.jar*1742119008:/system/framework/android.test.mock.jar*1065265343])
+05-05 07:09:06.642  6897  6897 W zygote  : ClassLoaderContext classpath size mismatch for position 0. expected=0, found=3 (PCL[] | PCL[/system/framework/android.test.runner.jar*1742119008:/system/framework/android.test.mock.jar*1065265343:/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk*3600331132])
+05-05 07:09:06.649  6897  6897 W System  : ClassLoader referenced unknown path: 
+05-05 07:09:06.655  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:08.645  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 39 lines
+05-05 07:09:08.664  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:08.750  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:08.836  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 3 lines
+05-05 07:09:08.918  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:08.921  6897  6897 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<androidx.core.app.AppComponentFactory>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/app/AppComponentFactory;
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:08.921  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.921  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.921  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.921  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.921  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:08.921  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:08.921  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:08.921  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:08.922  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:08.922  6897  6897 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.app.AppComponentFactory" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:08.922  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:08.923  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.923  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.923  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.923  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:08.923  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:08.923  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:08.924  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:08.924  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:08.924  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:08.924  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:08.924  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:08.924  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:08.924  6897  6897 I zygote  : 
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: Cannot load class. Make sure it is in your apk. Class name: 'androidx.core.app.AppComponentFactory'. Message: androidx.core.app.AppComponentFactory
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: java.lang.ClassNotFoundException: androidx.core.app.AppComponentFactory
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.classForName(Native Method)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.forName(Class.java:453)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.createPackageInfo(ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.-wrap0(Unknown Source:0)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.SimpleCache.get(SimpleCache.java:32)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages(ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(Unknown Source:0)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(TestGrouping.java:134)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.addPackagesRecursive(TestGrouping.java:110)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestSuiteBuilder.includePackages(TestSuiteBuilder.java:102)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.test.InstrumentationTestRunner.onCreate(InstrumentationTestRunner.java:377)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5732)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.-wrap1(Unknown Source:0)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Looper.loop(Looper.java:164)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.main(ActivityThread.java:6494)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.reflect.Method.invoke(Native Method)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: androidx.core.app.AppComponentFactory
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.VMClassLoader.findLoadedClass(Native Method)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.findLoadedClass(ClassLoader.java:738)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:363)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/app/AppComponentFactory;
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: Didn't find class "android.app.AppComponentFactory" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:125)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:08.928  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.930  6897  6897 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<androidx.core.app.CoreComponentFactory>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/app/AppComponentFactory;
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:08.930  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.930  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.930  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.930  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.930  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:08.930  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:08.930  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:08.930  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:08.930  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:08.931  6897  6897 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.app.AppComponentFactory" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:08.931  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.931  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.931  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.931  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:08.931  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:08.931  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:08.932  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:08.932  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:08.932  6897  6897 I zygote  : 
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: Cannot load class. Make sure it is in your apk. Class name: 'androidx.core.app.CoreComponentFactory'. Message: androidx.core.app.CoreComponentFactory
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: java.lang.ClassNotFoundException: androidx.core.app.CoreComponentFactory
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.classForName(Native Method)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.forName(Class.java:453)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.createPackageInfo(ClassPathPackageInfoSource.java:93)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.-wrap0(Unknown Source:0)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:50)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:48)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.SimpleCache.get(SimpleCache.java:32)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages(ClassPathPackageInfoSource.java:230)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(ClassPathPackageInfoSource.java:243)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:237)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(Unknown Source:0)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:77)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(TestGrouping.java:134)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.addPackagesRecursive(TestGrouping.java:110)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestSuiteBuilder.includePackages(TestSuiteBuilder.java:102)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.test.InstrumentationTestRunner.onCreate(InstrumentationTestRunner.java:377)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5732)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.-wrap1(Unknown Source:0)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Looper.loop(Looper.java:164)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.main(ActivityThread.java:6494)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.reflect.Method.invoke(Native Method)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: androidx.core.app.CoreComponentFactory
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.VMClassLoader.findLoadedClass(Native Method)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.findLoadedClass(ClassLoader.java:738)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:363)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/app/AppComponentFactory;
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: Didn't find class "android.app.AppComponentFactory" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:125)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:08.936  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:08.938  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:23.730  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 308 lines
+05-05 07:09:23.813  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:23.815  6897  6897 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin>: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/facebook/stetho/dumpapp/DumperPlugin;
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:23.815  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:23.815  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:23.815  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:23.815  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:23.815  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:23.815  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:23.816  6897  6897 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "com.facebook.stetho.dumpapp.DumperPlugin" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+05-05 07:09:23.816  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.createPackageInfo(java.lang.String) (ClassPathPackageInfoSource.java:93)
+05-05 07:09:23.816  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource.-wrap0(android.test.ClassPathPackageInfoSource, java.lang.String) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:23.816  6897  6897 I zygote  :   at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo android.test.ClassPathPackageInfoSource$1.load(java.lang.String) (ClassPathPackageInfoSource.java:50)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Object android.test.ClassPathPackageInfoSource$1.load(java.lang.Object) (ClassPathPackageInfoSource.java:48)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.lang.Object android.test.SimpleCache.get(java.lang.Object) (SimpleCache.java:32)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages() (ClassPathPackageInfoSource.java:230)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(java.util.Set) (ClassPathPackageInfoSource.java:243)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive() (ClassPathPackageInfoSource.java:237)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(android.test.ClassPathPackageInfoSource$ClassPathPackageInfo) (ClassPathPackageInfoSource.java:-1)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.util.Set android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(java.lang.String) (ClassPathPackageInfoSource.java:77)
+05-05 07:09:23.816  6897  6897 I zygote  :   at java.util.List android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(java.lang.String) (TestGrouping.java:134)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.test.suitebuilder.TestGrouping.addPackagesRecursive(java.lang.String[]) (TestGrouping.java:110)
+05-05 07:09:23.816  6897  6897 I zygote  :   at android.test.suitebuilder.TestSuiteBuilder android.test.suitebuilder.TestSuiteBuilder.includePackages(java.lang.String[]) (TestSuiteBuilder.java:102)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.test.InstrumentationTestRunner.onCreate(android.os.Bundle) (InstrumentationTestRunner.java:377)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.app.ActivityThread.handleBindApplication(android.app.ActivityThread$AppBindData) (ActivityThread.java:5732)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.app.ActivityThread.-wrap1(android.app.ActivityThread, android.app.ActivityThread$AppBindData) (ActivityThread.java:-1)
+05-05 07:09:23.816  6897  6897 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1656)
+05-05 07:09:23.817  6897  6897 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+05-05 07:09:23.817  6897  6897 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
+05-05 07:09:23.817  6897  6897 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
+05-05 07:09:23.817  6897  6897 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+05-05 07:09:23.817  6897  6897 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+05-05 07:09:23.817  6897  6897 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
+05-05 07:09:23.817  6897  6897 I zygote  : 
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: Cannot load class. Make sure it is in your apk. Class name: 'com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin'. Message: com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: java.lang.ClassNotFoundException: com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.classForName(Native Method)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.forName(Class.java:453)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.createPackageInfo(ClassPathPackageInfoSource.java:93)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.-wrap0(Unknown Source:0)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:50)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:48)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.SimpleCache.get(SimpleCache.java:32)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages(ClassPathPackageInfoSource.java:230)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(ClassPathPackageInfoSource.java:243)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:237)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(Unknown Source:0)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:77)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(TestGrouping.java:134)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.addPackagesRecursive(TestGrouping.java:110)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestSuiteBuilder.includePackages(TestSuiteBuilder.java:102)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.test.InstrumentationTestRunner.onCreate(InstrumentationTestRunner.java:377)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5732)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.-wrap1(Unknown Source:0)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Looper.loop(Looper.java:164)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.main(ActivityThread.java:6494)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.reflect.Method.invoke(Native Method)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.VMClassLoader.findLoadedClass(Native Method)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.findLoadedClass(ClassLoader.java:738)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:363)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/facebook/stetho/dumpapp/DumperPlugin;
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.facebook.stetho.dumpapp.DumperPlugin" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:125)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:23.820  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.820  6897  6897 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<com.facebook.imagepipeline.stetho.BaseFrescoStethoPlugin>: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/facebook/stetho/dumpapp/DumperPlugin;
+05-05 07:09:23.820  6897  6897 I zygote  : (Throwable with no stack trace)
+05-05 07:09:23.820  6897  6897 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "com.facebook.stetho.dumpapp.DumperPlugin" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:23.820  6897  6897 I zygote  : (Throwable with no stack trace)
+05-05 07:09:23.820  6897  6897 I zygote  : 
+05-05 07:09:23.820  6897  6897 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<com.facebook.imagepipeline.stetho.FrescoStethoPlugin>: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/facebook/stetho/dumpapp/DumperPlugin;
+05-05 07:09:23.820  6897  6897 I zygote  : (Throwable with no stack trace)
+05-05 07:09:23.820  6897  6897 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "com.facebook.stetho.dumpapp.DumperPlugin" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:23.820  6897  6897 I zygote  : (Throwable with no stack trace)
+05-05 07:09:23.820  6897  6897 I zygote  : 
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: Cannot load class. Make sure it is in your apk. Class name: 'com.facebook.imagepipeline.stetho.FrescoStethoPlugin'. Message: com.facebook.imagepipeline.stetho.FrescoStethoPlugin
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: java.lang.ClassNotFoundException: com.facebook.imagepipeline.stetho.FrescoStethoPlugin
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.classForName(Native Method)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.Class.forName(Class.java:453)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.createPackageInfo(ClassPathPackageInfoSource.java:93)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.-wrap0(Unknown Source:0)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:50)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$1.load(ClassPathPackageInfoSource.java:48)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.SimpleCache.get(SimpleCache.java:32)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getSubpackages(ClassPathPackageInfoSource.java:230)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.addTopLevelClassesTo(ClassPathPackageInfoSource.java:243)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:237)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource$ClassPathPackageInfo.-wrap0(Unknown Source:0)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.ClassPathPackageInfoSource.getTopLevelClassesRecursive(ClassPathPackageInfoSource.java:77)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.testCaseClassesInPackage(TestGrouping.java:134)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestGrouping.addPackagesRecursive(TestGrouping.java:110)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.suitebuilder.TestSuiteBuilder.includePackages(TestSuiteBuilder.java:102)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.test.InstrumentationTestRunner.onCreate(InstrumentationTestRunner.java:377)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5732)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.-wrap1(Unknown Source:0)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.os.Looper.loop(Looper.java:164)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at android.app.ActivityThread.main(ActivityThread.java:6494)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.reflect.Method.invoke(Native Method)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: com.facebook.imagepipeline.stetho.FrescoStethoPlugin
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.VMClassLoader.findLoadedClass(Native Method)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.findLoadedClass(ClassLoader.java:738)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:363)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/facebook/stetho/dumpapp/DumperPlugin;
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.facebook.stetho.dumpapp.DumperPlugin" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk", zip file "/data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86, /data/app/com.hellowdetox.test-28n1NuQ4ov5wA9XKVNGN-g==/base.apk!/lib/x86, /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/base.apk!/lib/x86, /system/lib, /vendor/lib]]
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:125)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 07:09:23.824  6897  6897 W ClassPathPackageInfoSource: 	... 25 more
+05-05 07:09:23.824  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:31.545  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 169 lines
+05-05 07:09:31.546  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:31.630  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:32.206  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 12 lines
+05-05 07:09:32.208  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:32.320  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:35.127  6897  6897 I chatty  : uid=10111(com.hellowdetox) identical 63 lines
+05-05 07:09:35.210  6897  6897 W zygote  : Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+05-05 07:09:35.217  6897  6902 I zygote  : Do partial code cache collection, code=29KB, data=18KB
+05-05 07:09:35.219  6897  6902 I zygote  : After code cache collection, code=28KB, data=17KB
+05-05 07:09:35.219  6897  6902 I zygote  : Increasing code cache capacity to 128KB
+05-05 07:09:35.240  6897  6897 W TestGrouping: Invalid Package: '' could not be found or has no tests
+05-05 07:09:35.243  6897  6897 D SoLoader: init start
+05-05 07:09:35.243  6897  6897 D SoLoader: adding system library source: /vendor/lib
+05-05 07:09:35.243  6897  6897 D SoLoader: adding system library source: /system/lib
+05-05 07:09:35.244  6897  6897 D SoLoader: adding application source: com.facebook.soloader.DirectorySoSource[root = /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86 flags = 0]
+05-05 07:09:35.244  6897  6897 D SoLoader: adding backup source from : com.facebook.soloader.ApkSoSource[root = /data/data/com.hellowdetox/lib-main flags = 1]
+05-05 07:09:35.244  6897  6897 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /system/lib flags = 2]
+05-05 07:09:35.244  6897  6897 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /vendor/lib flags = 2]
+05-05 07:09:35.244  6897  6897 D SoLoader: Preparing SO source: com.facebook.soloader.DirectorySoSource[root = /data/app/com.hellowdetox-oF-Y8hp-tq7W7IzSWu_22Q==/lib/x86 flags = 0]
+05-05 07:09:35.244  6897  6897 D SoLoader: Preparing SO source: com.facebook.soloader.ApkSoSource[root = /data/data/com.hellowdetox/lib-main flags = 1]
+05-05 07:09:35.245  6897  6897 V fb-UnpackingSoSource: locked dso store /data/user/0/com.hellowdetox/lib-main
+05-05 07:09:35.251  6897  6897 V fb-UnpackingSoSource: deps mismatch on deps store: regenerating
+05-05 07:09:35.251  6897  6897 V fb-UnpackingSoSource: so store dirty: regenerating

@@ -1,0 +1,30 @@
+--------- beginning of main
+05-05 17:23:03.058  5942  5942 I com.hellowdeto: Not late-enabling -Xcheck:jni (already on)
+05-05 17:23:03.072  5942  5942 E com.hellowdeto: Unknown bits set in runtime_flags: 0x8000
+05-05 17:23:03.072  5942  5942 W com.hellowdeto: Unexpected CPU variant for X86 using defaults: x86
+--------- beginning of system
+05-05 17:23:03.143  5942  5942 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.hellowdetox]: x86, null instrumentation[com.hellowdetox.test]: null, null
+05-05 17:23:03.145  5942  5942 I com.hellowdeto: The ClassLoaderContext is a special shared library.
+05-05 17:23:03.270  5942  5942 I chatty  : uid=10136(com.hellowdetox) identical 2 lines
+05-05 17:23:03.271  5942  5942 I com.hellowdeto: The ClassLoaderContext is a special shared library.
+05-05 17:23:03.364  5942  5942 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: FATAL EXCEPTION: main
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: Process: com.hellowdetox, PID: 5942
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate instrumentation ComponentInfo{com.hellowdetox.test/androidx.test.runner.AndroidJUnitRunner}: java.lang.ClassNotFoundException: Didn't find class "androidx.test.runner.AndroidJUnitRunner" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-Jrm4xPWtIeU5sJlKixNnjQ==/base.apk", zip file "/data/app/com.hellowdetox-4JiHeKrInB5yCzEJ7fY3Mg==/base.apk"],nativeLibraryDirectories=[/system/lib, /system/product/lib]]
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6395)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.app.ActivityThread.access$1300(ActivityThread.java:219)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1859)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7356)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "androidx.test.runner.AndroidJUnitRunner" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.hellowdetox.test-Jrm4xPWtIeU5sJlKixNnjQ==/base.apk", zip file "/data/app/com.hellowdetox-4JiHeKrInB5yCzEJ7fY3Mg==/base.apk"],nativeLibraryDirectories=[/system/lib, /system/product/lib]]
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:196)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6391)
+05-05 17:23:03.366  5942  5942 E AndroidRuntime: 	... 8 more
+05-05 17:23:03.368  5942  5942 I Process : Sending signal. PID: 5942 SIG: 9

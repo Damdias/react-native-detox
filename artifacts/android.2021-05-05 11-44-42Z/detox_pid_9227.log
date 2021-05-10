@@ -1,0 +1,91 @@
+detox[9227] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{"artifactsConfig":{"rootDir":"artifacts/android.2021-05-05 11-44-42Z","plugins":{"log":{"enabled":true,"keepOnlyFailedTestsArtifacts":false},"screenshot":{"enabled":true,"shouldTakeAutomaticSnapshots":false,"keepOnlyFailedTestsArtifacts":false},"video":{"enabled":false,"keepOnlyFailedTestsArtifacts":false},"instruments":{"enabled":false,"keepOnlyFailedTestsArtifacts":false},"timeline":{"enabled":false},"uiHierarchy":{"enabled":false,"keepOnlyFailedTestsArtifacts":false}},"pathBuilder":{"_rootDir":"artifacts/android.2021-05-05 11-44-42Z"}},"appsConfig":{"default":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/debug/app-debug.apk","build":"cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd .."}},"behaviorConfig":{"init":{"reinstallApp":true,"exposeGlobals":true},"cleanup":{"shutdownDevice":false},"launchApp":"auto"},"cliConfig":{"recordLogs":"all","configuration":"android","forceAdbInstall":"false","useCustomLogger":"true"},"deviceConfig":{"type":"android.emulator","device":{"avdName":"Pixel_XL_API_27"}},"runnerConfig":{"testRunner":"jest","runnerConfig":"e2e/config.json","specs":"e2e"},"sessionConfig":{"autoStart":true,"server":"ws://localhost:49801","sessionId":"5cd34bb1-a985-c563-c22a-c3e95ac5083e","debugSynchronization":10000},"errorComposer":{"configurationName":"android","filepath":"/Users/damith/devs/reactNative/HellowDetox/.detoxrc.json","contents":{"testRunner":"jest","runnerConfig":"e2e/config.json","apps":{"ios":{"type":"ios.app","binaryPath":"ios/build/Build/Products/Debug-iphonesimulator/HellowDetox.app","build":"xcodebuild -workspace ios/HellowDetox.xcworkspace  -scheme HellowDetox  -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"},"android":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/debug/app-debug.apk","build":"cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd .."},"android.release":{"type":"android.apk","binaryPath":"android/app/build/outputs/apk/release/app-release.apk","build":"cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd .."}},"devices":{"simulator":{"type":"ios.simulator","device":{"type":"iPhone 12"}},"emulator":{"type":"android.emulator","device":{"avdName":"Pixel_XL_API_27"}}},"configurations":{"ios":{"device":"simulator","app":"ios"},"android":{"device":"emulator","app":"android"},"android.emu.release":{"device":"emulator","app":"android.release"}}},"_extends":false}}
+detox[9227] DEBUG: [WSS_CREATE] Detox server listening on localhost:49801...
+detox[9227] DEBUG: [WSS_CONNECTION, #49802] registered a new connection.
+detox[9227] TRACE: [WS_OPEN] opened web socket to: ws://localhost:49801
+detox[9227] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"5cd34bb1-a985-c563-c22a-c3e95ac5083e","role":"tester"},"messageId":0}
+detox[9227] TRACE: [WSS_GET_FROM, #49802] {"type":"login","params":{"sessionId":"5cd34bb1-a985-c563-c22a-c3e95ac5083e","role":"tester"},"messageId":0}
+detox[9227] TRACE: [SESSION_CREATED] created session 5cd34bb1-a985-c563-c22a-c3e95ac5083e
+detox[9227] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+detox[9227] TRACE: [SESSION_JOINED] tester joined session 5cd34bb1-a985-c563-c22a-c3e95ac5083e
+detox[9227] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+detox[9227] DEBUG: [EXEC_CMD, #0] "/Users/damith/Library/Android/sdk/emulator/emulator" -list-avds --verbose
+detox[9227] TRACE: [EXEC_SUCCESS, #0] Nexus_S_API_29
+Pixel_XL_API_27
+Pixel_XL_API_29
+prod-sim
+
+detox[9227] DEBUG: [EXEC_CMD, #1] "/Users/damith/Library/Android/sdk/emulator/emulator" -version 
+detox[9227] TRACE: [EXEC_SUCCESS, #1] Android emulator version 30.5.6.0 (build_id 7318519) (CL:N/A)
+Copyright (C) 2006-2017 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+
+detox[9227] DEBUG: [EMU_BIN_VERSION_DETECT] Detected emulator binary version { major: 30, minor: 5, patch: 6, toString: [Function: toString] }
+detox[9227] DEBUG: [ALLOCATE_DEVICE] Trying to allocate a device based on "Pixel_XL_API_27"
+detox[9227] DEBUG: [EXEC_CMD, #2] "/Users/damith/Library/Android/sdk/platform-tools/adb"  devices
+detox[9227] DEBUG: [EXEC_SUCCESS, #2] List of devices attached
+emulator-5554	device
+
+
+detox[9227] TRACE: [TELNET_CONNECTING] port: 5554, host: localhost
+detox[9227] DEBUG: [DEVICE_LOOKUP] Device emulator-5554 does not match "Pixel_XL_API_27"
+detox[9227] DEBUG: [ALLOCATE_DEVICE] Settled on emulator-13402
+detox[9227] DEBUG: [SPAWN_CMD] /Users/damith/Library/Android/sdk/emulator/emulator -verbose -no-audio -no-boot-anim -port 13402 @Pixel_XL_API_27
+detox[9227] ERROR: [SPAWN_FAIL] `/Users/damith/Library/Android/sdk/emulator/emulator -verbose -no-audio -no-boot-anim -port 13402 @Pixel_XL_API_27` failed with code 1
+  err: ChildProcessError: `/Users/damith/Library/Android/sdk/emulator/emulator -verbose -no-audio -no-boot-anim -port 13402 @Pixel_XL_API_27` failed with code 1
+      at ChildProcess.<anonymous> (/Users/damith/devs/reactNative/HellowDetox/node_modules/child-process-promise/lib/index.js:132:23)
+      at ChildProcess.emit (events.js:315:20)
+      at maybeClose (internal/child_process.js:1021:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:286:5)
+detox[9227] ERROR: [SPAWN_FAIL] emulator: autoconfig: -skin pixel_xl_silver
+emulator: autoconfig: -skindir /Users/damith/Library/Android/sdk/skins/
+emulator: autoconfig: -kernel /Users/damith/Library/Android/sdk/system-images/android-27/google_apis/x86//kernel-ranchu-64
+emulator: Target arch = 'x86'
+emulator: Auto-config: -qemu -cpu qemu32
+emulator: Auto-detect: Kernel image requires new device naming scheme.
+emulator: Auto-detect: Kernel does not support YAFFS2 partitions.
+emulator: autoconfig: -ramdisk /Users/damith/Library/Android/sdk/system-images/android-27/google_apis/x86//ramdisk.img
+emulator: Using initial system image: /Users/damith/Library/Android/sdk/system-images/android-27/google_apis/x86//system.img
+emulator: Using initial vendor image: /Users/damith/Library/Android/sdk/system-images/android-27/google_apis/x86//vendor.img
+emulator: autoconfig: -data /Users/damith/.android/avd/Pixel_XL_API_27.avd/userdata-qemu.img
+emulator: autoconfig: -initdata /Users/damith/.android/avd/Pixel_XL_API_27.avd/userdata.img
+emulator: autoconfig: -cache /Users/damith/.android/avd/Pixel_XL_API_27.avd/cache.img
+emulator: autoconfig: -sdcard /Users/damith/.android/avd/Pixel_XL_API_27.avd/sdcard.img
+emulator: Physical RAM size: 1536MB
+
+emulator: System image is read only
+emulator: Found 1 DNS servers: 192.168.1.1
+emulator: ERROR: Running multiple emulators with the same AVD is an experimental feature.
+Please use -read-only flag to enable this feature.
+
+
+detox[9227] ERROR: ChildProcessError: `/Users/damith/Library/Android/sdk/emulator/emulator -verbose -no-audio -no-boot-anim -port 13402 @Pixel_XL_API_27` failed with code 1
+    at ChildProcess.<anonymous> (/Users/damith/devs/reactNative/HellowDetox/node_modules/child-process-promise/lib/index.js:132:23)
+    at ChildProcess.emit (events.js:315:20)
+    at maybeClose (internal/child_process.js:1021:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:286:5)
+detox[9227] INFO:  [97mExample[39m is assigned to [91mundefined[39m
+detox[9227] INFO:  [1m[37mExample: [39m[22m[90mshould have welcome screen[39m
+detox[9227] INFO:  [1m[37mExample: [39m[22m[90mshould have welcome screen[39m[90m [[33mSKIPPED[90m][39m
+detox[9227] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+detox[9227] TRACE: [ARTIFACT_START] starting FileArtifact
+detox[9227] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+detox[9227] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts/android.2021-05-05 11-44-42Z/detox_pid_9227.json.log { append: true }
+detox[9227] TRACE: [ARTIFACT_START] starting FileArtifact
+detox[9227] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+detox[9227] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts/android.2021-05-05 11-44-42Z/detox_pid_9227.log { append: true }
+detox[9227] DEBUG: [MOVE_FILE] moving "/private/var/folders/vr/plrnhmvs35lc5pswx55w9spc0000gn/T/3f83611b-388e-43d0-8621-697bcb24a6d6.detox.log" to artifacts/android.2021-05-05 11-44-42Z/detox_pid_9227.json.log
+detox[9227] DEBUG: [MOVE_FILE] moving "/private/var/folders/vr/plrnhmvs35lc5pswx55w9spc0000gn/T/92ff5c93-d268-4c8f-b4f9-7395e221ccde.detox.log" to artifacts/android.2021-05-05 11-44-42Z/detox_pid_9227.log
+detox[9227] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+detox[9227] TRACE: [SESSION_TORN] tester exited session 5cd34bb1-a985-c563-c22a-c3e95ac5083e

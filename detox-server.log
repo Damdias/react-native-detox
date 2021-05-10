@@ -1,0 +1,18 @@
+detox[2286] ERROR: [cli.js] [31mError: listen EADDRINUSE: address already in use :::8099[39m
+detox[2286] ERROR: [cli.js] [31m    at Server.setupListenHandle [as _listen2] (net.js:1313:16)[39m
+detox[2286] ERROR: [cli.js] [31m    at listenInCluster (net.js:1361:12)[39m
+detox[2286] ERROR: [cli.js] [31m    at Server.listen (net.js:1447:7)[39m
+detox[2286] ERROR: [cli.js] [31m    at new WebSocketServer (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/node_modules/ws/lib/websocket-server.js:75:20)[39m
+detox[2286] ERROR: [cli.js] [31m    at DetoxServer._startListening (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/server/DetoxServer.js:51:17)[39m
+detox[2286] ERROR: [cli.js] [31m    at DetoxServer.open (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/src/server/DetoxServer.js:29:16)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.runServer [as handler] (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/local-cli/run-server.js:34:6)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.runCommand (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/node_modules/yargs/build/index.cjs:446:48)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.parseArgs [as _parseArgs] (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/node_modules/yargs/build/index.cjs:2697:57)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.parse (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/node_modules/yargs/build/index.cjs:2260:31)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.<anonymous> (/Users/damith/devs/reactNative/HellowDetox/node_modules/detox/local-cli/cli.js:41:4)[39m
+detox[2286] ERROR: [cli.js] [31m    at Module._compile (internal/modules/cjs/loader.js:1138:30)[39m
+detox[2286] ERROR: [cli.js] [31m    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)[39m
+detox[2286] ERROR: [cli.js] [31m    at Module.load (internal/modules/cjs/loader.js:986:32)[39m
+detox[2286] ERROR: [cli.js] [31m    at Function.Module._load (internal/modules/cjs/loader.js:879:14)[39m
+detox[2286] ERROR: [cli.js] [31m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)[39m
+
