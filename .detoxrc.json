@@ -7,6 +7,11 @@
       "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/HellowDetox.app",
       "build": "xcodebuild -workspace ios/HellowDetox.xcworkspace  -scheme HellowDetox  -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
     },
+    "ios.sim.debug": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/HellowDetox.app",
+      "build": "xcodebuild -workspace ios/HellowDetox.xcworkspace  -scheme HellowDetox  -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+    },
     "android": {
       "type": "android.apk",
       "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
@@ -36,6 +41,10 @@
     "ios": {
       "device": "simulator",
       "app": "ios"
+    },
+    "ios.debug": {
+      "device": "simulator",
+      "app": "ios.sim.debug"
     },
     "android": {
       "device": "emulator",
