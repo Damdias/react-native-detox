@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HellowDetoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HellowDetoxTests.m */; };
+		08A94856264D4F5200850F47 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A94855264D4F5200850F47 /* AppCenter-Config.plist */; };
 		0E05BAAA424F62F6FBB7E4B0 /* libPods-HellowDetox-HellowDetoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D51DA5CFD6EF6D1349CA4B /* libPods-HellowDetox-HellowDetoxTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HellowDetoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HellowDetoxTests.m; sourceTree = "<group>"; };
 		0710C11A1B5AC5B6AFEE5703 /* libPods-HellowDetox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HellowDetox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A94855264D4F5200850F47 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HellowDetox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HellowDetox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HellowDetox/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HellowDetox/AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* HellowDetox */ = {
 			isa = PBXGroup;
 			children = (
+				08A94855264D4F5200850F47 /* AppCenter-Config.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -114,7 +117,6 @@
 				1C67B768DE4D94F41EDAF0BE /* Pods-HellowDetox-HellowDetoxTests.debug.xcconfig */,
 				BBBE06D5A6271AFD5DDE45FB /* Pods-HellowDetox-HellowDetoxTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				08A94856264D4F5200850F47 /* AppCenter-Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
